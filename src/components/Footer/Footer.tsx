@@ -1,25 +1,10 @@
 /* eslint-disable react/jsx-key */
+import Box from "@mui/material/Box";
 import React from "react";
-import {
-  Twitter,
-  Facebook,
-  Instagram,
-  Footer,
-  TopBar,
-  GetTheApp,
-  GetTheAppTitle,
-  AppStoreApp,
-  GoogleApp,
-  DesktopSocialList,
-  HR,
-  BottomBar,
-  Menu,
-  MenuHead,
-  MenuLink,
-  MobileSocialList,
-  Policy,
-  PolicyRow,
-} from "./Footer.styles";
+import Bottom from "./Bottom";
+import Contact from "./Contact";
+import Estimate from "./Estimate";
+import InTouch from "./InTouch";
 
 const menu = [
   {
@@ -43,64 +28,47 @@ const menu = [
   },
 ];
 
-const SocialList = () => (
-  <>
-    <Twitter />
-    <Facebook />
-    <Instagram />
-  </>
-);
+// const SocialList = () => (
+//   <>
+//     <Twitter />
+//     <Facebook />
+//     <Instagram />
+//   </>
+// );
 
 function FooterApp() {
   return (
-    <Footer>
-      <TopBar>
-        <GetTheApp>
-          <GetTheAppTitle> Get The App</GetTheAppTitle>
-          <AppStoreApp />
-          <GoogleApp />
-        </GetTheApp>
-        <DesktopSocialList>
-          <SocialList />
-        </DesktopSocialList>
-      </TopBar>
-      <HR />
-      <BottomBar>
-        {menu.map(({ name, links }) => (
-          <Menu>
-            <MenuHead>{name}</MenuHead>
-            {links.map(({ title, url }) => (
-              <MenuLink href={url}>{title}</MenuLink>
-            ))}
-          </Menu>
-        ))}
-        <MobileSocialList>
-          <SocialList />
-        </MobileSocialList>
-        <Policy>
-          <PolicyRow>© 2019 Openfit, LLC. All rights reserved.</PolicyRow>
-          <PolicyRow>
-            +Results vary depending on starting point and effort. Exercise and
-            proper diet are necessary to achieve and maintain weight loss and
-            muscle definition. The testimonials featured may have used more than
-            one product or extended the program to achieve their maximum
-            results.
-          </PolicyRow>
-          <PolicyRow>
-            Consult your physician and follow all safety instructions before
-            beginning any exercise program or using any supplement or meal
-            replacement product, especially if you have any unique medical
-            conditions or needs. The contents on our website are for
-            informational purposes only, and are not intended to diagnose any
-            medical condition, replace the advice of a healthcare professional,
-            or provide any medical advice, diagnosis, or treatment.
-          </PolicyRow>
-          <PolicyRow>
-            As an Amazon Associate, we may earn from qualifying purchases.
-          </PolicyRow>
-        </Policy>
-      </BottomBar>
-    </Footer>
+    <Box sx={{ backgroundColor: "white", height: 400, position: "relative" }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          
+        }}
+      >
+        <Box sx={{ borderRight: "1px solid gray", height: "100%",width: "33%", marginX: 2, marginY: 5, padding: 2 }}>
+          <Contact />
+        </Box>
+        <Box sx={{ borderRight: "1px solid gray", height: "100%", width: "33%", marginX: 2, marginY: 5  }}>
+          <InTouch />
+        </Box>
+        <Box sx={{ height: "100%", width: "33%", marginX: 2, marginY: 5  }}>
+          <Estimate />
+        </Box>
+      </Box>
+      <Box
+        sx={{
+          bottom: 0,
+          backgroundColor: "white",
+          height: 50,
+          position: "absolute",
+          width: "100%",
+          borderTop: "1px solid gray",
+        }}
+      >
+        <Bottom />
+      </Box>
+    </Box>
   );
 }
 export default FooterApp;

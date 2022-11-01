@@ -12,7 +12,7 @@ import {
 } from "./Header.styles";
 import LogoRed from "../../assets/images/logo/nexxt-white.png";
 import LogoBlack from "../../assets/images/logo/nexxt-black.png";
-import { Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
@@ -36,12 +36,22 @@ const Header = () => {
 
   return (
     <>
-      <Nav
-        style={{
+      <Box
+        sx={{
           backgroundColor: navbar ? "#282526" : "",
+          fontSize: "18px",
+          position: "fixed",
+          top: "0",
+          zIndex: "999",
+          width: "100%",
+          height: "70px",
+          transition: "linear 0.3s",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        <NavbarContainer>
+        <NavbarContainer >
           <NavLogo to="/">
             <img
               style={{ height: "50px" }}
@@ -87,7 +97,7 @@ const Header = () => {
             </MenuItemBtn>
           </Menu>
         </NavbarContainer>
-      </Nav>
+      </Box>
     </>
   );
 };
