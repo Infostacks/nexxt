@@ -29,7 +29,7 @@ const Header = () => {
     if (window.scrollY >= 100) {
       setNavbar(true);
     } else {
-      setNavbar(false);
+      setNavbar(true);
     }
   };
 
@@ -39,7 +39,7 @@ const Header = () => {
     <>
       <Nav
         style={{
-          backgroundColor: navbar ? "#282526" : "",
+          backgroundColor: navbar ? "#282526" : "black",
         }}
       >
         <NavbarContainer>
@@ -51,12 +51,12 @@ const Header = () => {
             />
           </NavLogo>
           <MenuIcon onClick={handleClick}></MenuIcon>
-          <Menu onClick={handleClick}> 
+          <Menu onClick={handleClick}>
             <MenuItem>
               <MenuLink to="/">Home</MenuLink>
-            </MenuItem > 
+            </MenuItem >
             <MenuItem>
-              <MenuLink to="#" onClick={()=>{console.log('hello world')}}>Services</MenuLink>
+              <MenuLink to="/services">Services</MenuLink>
             </MenuItem>
             <MenuItem>
               <MenuLink to="/portfolio">Portfolio</MenuLink>
@@ -72,7 +72,7 @@ const Header = () => {
             </MenuItem>
             <MenuItemBtn>
               <MenuLinkBtn to="/get-quote">
-          <CustomButton text={"Get a Quote"} buttonSize={"10px 30px 10px 30px"}/>
+                <CustomButton text={"Get a Quote"} buttonSize={"10px 30px 10px 30px"} />
 
                 {/* <Button
                   sx={{
