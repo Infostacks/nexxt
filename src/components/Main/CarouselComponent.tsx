@@ -1,6 +1,5 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
 import img1 from "../../assets/images/images/1.png";
 import img6 from "../../assets/images/images/6.png";
 import img3 from "../../assets/images/images/3.png";
@@ -59,7 +58,7 @@ const CarouselComponent = () => {
               sx={{
                 height: "850px",
                 display: "flex",
-                justifyContent: "space-between",
+                justifyContent: { xs: "block", md: "space-between", lg: "space-around", xl: "space-around" },
               }}
             >
               <Box
