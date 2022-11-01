@@ -13,6 +13,7 @@ import {
 import LogoRed from "../../assets/images/logo/nexxt-white.png";
 import LogoBlack from "../../assets/images/logo/nexxt-black.png";
 import { Box, Button } from "@mui/material";
+import CustomButton from "../CustomButton";
 
 const Header = () => {
   const [navbar, setNavbar] = useState(false);
@@ -36,22 +37,12 @@ const Header = () => {
 
   return (
     <>
-      <Box
-        sx={{
+      <Nav
+        style={{
           backgroundColor: navbar ? "#282526" : "",
-          fontSize: "18px",
-          position: "fixed",
-          top: "0",
-          zIndex: "999",
-          width: "100%",
-          height: "70px",
-          transition: "linear 0.3s",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
         }}
       >
-        <NavbarContainer >
+        <NavbarContainer>
           <NavLogo to="/">
             <img
               style={{ height: "50px" }}
@@ -60,12 +51,12 @@ const Header = () => {
             />
           </NavLogo>
           <MenuIcon onClick={handleClick}></MenuIcon>
-          <Menu onClick={handleClick}>
+          <Menu onClick={handleClick}> 
             <MenuItem>
               <MenuLink to="/">Home</MenuLink>
-            </MenuItem>
+            </MenuItem > 
             <MenuItem>
-              <MenuLink to="/services">Services</MenuLink>
+              <MenuLink to="#" onClick={()=>{console.log('hello world')}}>Services</MenuLink>
             </MenuItem>
             <MenuItem>
               <MenuLink to="/portfolio">Portfolio</MenuLink>
@@ -81,7 +72,9 @@ const Header = () => {
             </MenuItem>
             <MenuItemBtn>
               <MenuLinkBtn to="/get-quote">
-                <Button
+          <CustomButton text={"Get a Quote"} buttonSize={"10px 30px 10px 30px"}/>
+
+                {/* <Button
                   sx={{
                     fontWeight: "bold",
                     borderRadius: "10px",
@@ -92,12 +85,12 @@ const Header = () => {
                   }}
                 >
                   Get a Quote
-                </Button>
+                </Button> */}
               </MenuLinkBtn>
             </MenuItemBtn>
           </Menu>
         </NavbarContainer>
-      </Box>
+      </Nav>
     </>
   );
 };

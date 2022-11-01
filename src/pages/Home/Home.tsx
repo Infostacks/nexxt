@@ -13,7 +13,6 @@ const Home = () => {
     >
       <Header />
       <Main />
-
       <FooterApp />
     </div>
   );
