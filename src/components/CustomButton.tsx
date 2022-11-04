@@ -9,6 +9,7 @@ interface ButtonProps{
 const CustomButton = ({text, buttonSize}: ButtonProps) => {
   return (
     <Button
+
             sx={{
               fontWeight: "bold",
               borderRadius: "10px",

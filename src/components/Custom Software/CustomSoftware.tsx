@@ -1,9 +1,12 @@
 import React from 'react'
+import ConsultForm from '../Global Components/ConsultForm'
 
 const CustomSoftware = () => {
-  return (
-    <div>CustomSoftware</div>
-  )
+    return (
+        <>
+            <ConsultForm />
+        </>
+    )
 }
 
 export default CustomSoftware
