@@ -3,18 +3,18 @@ import { Grid, Typography } from "@mui/material"
 import { borderRadius, Box } from '@mui/system'
 const WorkNumbers = () => {
     return (
-        <Grid container sx={{ marginTop: 10, marginBottom: 5 }}>
-            <Grid item md={6} sx={{ justifyContent: "start" }}>
+        <Grid container justifyContent="start" sx={{ marginTop: 10, marginBottom: 5 }}>
+            <Grid item md={6} sx={{ justifyContent: "start", marginLeft: 5 }}>
                 <Typography variant='h3' sx={{ fontWeight: "bold", marginLeft: 5 }}>
                     Our Work in Numbers
                 </Typography>
             </Grid>
-            <Grid item md={8}>
+            <Grid item md={8} sx={{marginLeft: 5}}>
                 <Typography variant='subtitle1' sx={{ marginTop: 3, marginLeft: 5 }}>
                     We are more than a software services company designing and developing apps. To name a few software specialties, we love building SaaS programs, CRMs and lead generation tools, entrepreneurial apps and automation solutions, Enterprise Resource Programs, inventory management systems, financial management solutions, and database portals. In simplest words, TekRevol aims to engineer quality and code innovation.
                 </Typography>
             </Grid>
-            <Grid container justifyContent="space-evenly" sx={{ marginTop: 5, marginLeft: 4, padding: 1 }}>
+            <Grid container justifyContent="space-between" sx={{ marginTop: 5, marginLeft: 5, padding: 1 }}>
                 <Grid item md={3} sx={{
                     display:
                         "flex", justifyContent: "center", padding:4, borderRadius: 3, backgroundColor: "#F8F8FB", margin: 2

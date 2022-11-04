@@ -39,7 +39,7 @@ const Header = () => {
     <>
       <Nav
         style={{
-          backgroundColor: navbar ? "#282526" : "black",
+          backgroundColor: navbar ? "#282526" : "",
         }}
       >
         <NavbarContainer>
