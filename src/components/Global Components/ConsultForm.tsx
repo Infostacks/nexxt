@@ -2,9 +2,9 @@ import React from 'react'
 import { Box, Typography, TextField, Checkbox, FormControlLabel, Button } from "@mui/material";
 const ConsultForm = () => {
     return (
-        <Box sx={{ display: "flex", justifyContent: "end", alignItems: "end", margin: 2, marginTop: 10 }}>
-            <Box sx={{ width: "350px", height: "max", borderRadius: 5, padding: 1, marginRight: 10, marginTop: 5, boxShadow: 5 }}>
-                <Box sx={{ padding: 2 }}>
+        <Box sx={{ display: "flex", justifyContent: "end", alignItems: "end", margin: 2 }}>
+            <Box sx={{ width: "350px", height: "max", borderRadius: 5, padding: 2.5, paddingX: 5, marginTop: 5, boxShadow: 5 }}>
+                <Box sx={{  }}>
                     <Typography variant="h3" sx={{ fontWeight: "bolder" }}>Book a Free </Typography>
                     <Typography variant="h3" sx={{ fontWeight: "bolder", color: "orange" }}>Consultation</Typography>
                 </Box>

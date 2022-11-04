@@ -29,7 +29,7 @@ const Header = () => {
     if (window.scrollY >= 100) {
       setNavbar(true);
     } else {
-      setNavbar(true);
+      setNavbar(false);
     }
   };
 
