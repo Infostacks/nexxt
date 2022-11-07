@@ -13,12 +13,6 @@ const Services = () => {
     return (
         <>
             <IphoneAppDevelopment></IphoneAppDevelopment>
-            {/* <CustomSoftware />
-            <Business />
-            <BusinessCustomCard />
-            <BuildAndVisualize />
-            <EmergingTechnologies />
-            <WorkNumbers /> */}
         </>
     )
 }

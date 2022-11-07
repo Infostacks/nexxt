@@ -20,7 +20,7 @@ const CustomSoftware = () => {
         <IntroBanner />
       </Grid>
       <Grid md={4}>
-          <Box mx="67.5px">
+          <Box mx="67.5px"> 
             <ConsultForm />
           </Box>
       </Grid>
