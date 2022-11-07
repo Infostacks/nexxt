@@ -8,7 +8,7 @@ const ConsultForm = () => {
                     <Typography variant="h3" sx={{ fontWeight: "bolder" }}>Book a Free </Typography>
                     <Typography variant="h3" sx={{ fontWeight: "bolder", color: "orange" }}>Consultation</Typography>
                 </Box>
-                <Box sx={{ marginX: 3 }}>
+                <Box sx={{ marginX: 3, marginY: 2 }}>
                     <TextField
                         id="standard-helperText"
                         label="Full Name"
@@ -19,7 +19,7 @@ const ConsultForm = () => {
                         color="warning"
                     />
                 </Box>
-                <Box sx={{ marginX: 3, }}>
+                <Box sx={{ marginX: 3, marginY: 2 }}>
                     <TextField
                         id="standard-helperText"
                         label="Email"
@@ -30,7 +30,7 @@ const ConsultForm = () => {
                         color="warning"
                     />
                 </Box>
-                <Box sx={{ marginX: 3, }}>
+                <Box sx={{ marginX: 3, marginY: 2 }}>
                     <TextField
                         id="standard-helperText"
                         label="Phone Number"
@@ -41,7 +41,7 @@ const ConsultForm = () => {
                         color="warning"
                     />
                 </Box>
-                <Box sx={{ marginX: 3,}}>
+                <Box sx={{ marginX: 3, marginY: 2 }}>
                     <TextField
                         id="standard-helperText"
                         label="Description"
