@@ -5,7 +5,7 @@ import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 const BuildAndVisualize = () => {
     return (
         <Grid container spacing={2} sx={{ justifyContent: "center" }}>
-            <Grid item md={5} xl={5} sx={{ margin: 1, marginTop: 10, backgroundColor: "#EDEDED", borderRadius: 2 }}>
+            <Grid item md={5} sx={{ margin: 1, marginTop: 10, backgroundColor: "#EDEDED", borderRadius: 2 }}>
                 <Grid item sx={{ margin: 2, marginTop: 10, marginLeft: 5 }}>
                     <Typography sx={{ fontWeight: "bolder", fontSize: 25 }}>What you can visualize,</Typography>
                     <Typography sx={{ fontWeight: "bolder", fontSize: 25 }}>we can build</Typography>
@@ -14,7 +14,7 @@ const BuildAndVisualize = () => {
                     <CustomButton text='SCHEDULE A MEETING' buttonSize='10px 30px' />
                 </Grid>
             </Grid>
-            <Grid item md={5} xl={5} sx={{ margin: 1, marginTop: 10, marginLeft: 5, backgroundColor: "#EDEDED", borderRadius: 2 }}>
+            <Grid item md={5} sx={{ margin: 1, marginTop: 10, marginLeft: 5, backgroundColor: "#EDEDED", borderRadius: 2 }}>
                 <Grid item sx={{ margin: 2, marginTop: 10, marginLeft: 5 }}>
                     <Typography sx={{ fontWeight: "bolder", fontSize: 25 }}>Result-driven Software Solutions</Typography>
                     <Typography variant='subtitle1' sx={{ marginY: 2 }}> To keep pace with intelligent automation and digital transformation, your business has two practical options: be the first mover or follow the existing models at scale for disruption.</Typography>

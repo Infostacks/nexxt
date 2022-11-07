@@ -2,8 +2,8 @@ import React from 'react'
 import { Box, Typography, TextField, Checkbox, FormControlLabel, Button } from "@mui/material";
 const ConsultForm = () => {
     return (
-        <Box sx={{ display: "flex", justifyContent: "end", alignItems: "end", margin: 2 }}>
-            <Box sx={{ width: "350px", height: "max", borderRadius: 5, padding: 2.5, paddingX: 5, marginTop: 5, boxShadow: 5 }}>
+        <Box sx={{ display: "flex", justifyContent: "end", alignItems: "end", bgcolor: "white"}}>
+            <Box sx={{ width: "350px", height: "450px", borderRadius: 5, padding: 2.5, paddingX: 5, boxShadow: 5}}>
                 <Box sx={{  }}>
                     <Typography variant="h3" sx={{ fontWeight: "bolder" }}>Book a Free </Typography>
                     <Typography variant="h3" sx={{ fontWeight: "bolder", color: "orange" }}>Consultation</Typography>

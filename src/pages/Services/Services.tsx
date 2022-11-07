@@ -7,17 +7,18 @@ import BusinessCustomCard from '../../components/Global Components/BusinessCusto
 import CustomButton from '../../components/Global Components/CustomButton'
 import EmergingTechnologies from '../../components/Global Components/EmergingTechnologies'
 import WorkNumbers from '../../components/Global Components/WorkNumbers'
+import IphoneAppDevelopment from '../../components/iphone-app-development/IphoneAppDevelopment'
 
 const Services = () => {
     return (
         <>
-            <CustomSoftware />
+            <IphoneAppDevelopment></IphoneAppDevelopment>
+            {/* <CustomSoftware />
             <Business />
             <BusinessCustomCard />
-           
             <BuildAndVisualize />
             <EmergingTechnologies />
-            <WorkNumbers />
+            <WorkNumbers /> */}
         </>
     )
 }

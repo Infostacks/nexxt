@@ -1,11 +1,31 @@
-import React from 'react'
-import {Box} from "@mui/material"
-import IntroBanner from './IntroBanner'
+import React from "react";
+import CustomButton from "../CustomButton";
+import CustomDevCard from "../Card/CustomDevCard";
+import WhyUsSection from "../WhyUsSection";
+import FaqsSection from "./FaqsSection";
+import {
+  faqsSummaries,
+  faqsDetails,
+  devCardTitles,
+  devCardDetails,
+} from "../../assets/Strings/Services/iphone-app-development/IphoneAppDevelopment";
+import CustomSoftware from "../Custom Software/CustomSoftware";
 
 const IphoneAppDevelopment = () => {
   return (
-    <IntroBanner></IntroBanner>     
-  )
-}
+    <>
+      <CustomSoftware/>
+      <CustomDevCard
+        devCardTitles={devCardTitles}
+        devCardDetails={devCardDetails}
+      ></CustomDevCard>
+      <WhyUsSection></WhyUsSection>
+      <FaqsSection
+        faqsummaries={faqsSummaries}
+        faqDetails={faqsDetails}
+      ></FaqsSection>{" "}
+    </>
+  );
+};
 
-export default IphoneAppDevelopment
+export default IphoneAppDevelopment;
