@@ -17,13 +17,15 @@ const CustomSoftware = () => {
       }}
     >
       <Grid md={5} pr="15px">
-        <IntroBanner />
+        <IntroBanner heading1="Custom Software Development Services
+for" heading2="Businesses of All Sizes" subtitle1="We create custom, high-impact software solutions that empower businesses and enable them to lead with automation." subtitle2="Our custom software development services provide our partners and clients with the freedom to grow and scale at unprecedented rates. We help startups, medium-sized businesses, and enterprise-grade organizations to build performance-oriented systems." />
       </Grid>
       <Grid md={4}>
-          <Box mx="67.5px" sx={{borderLeft: {md: "70px solid #f8f8fb"},
-       }}>
-            <ConsultForm />
-          </Box>
+        <Box mx="67.5px" sx={{
+          borderLeft: { md: "70px solid #f8f8fb" },
+        }}>
+          <ConsultForm />
+        </Box>
       </Grid>
     </Grid>
   );
