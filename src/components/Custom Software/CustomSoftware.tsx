@@ -13,14 +13,15 @@ const CustomSoftware = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        bgcolor: "#f8f8fb"
+        bgcolor: "#f8f8fb",
       }}
     >
       <Grid md={5} pr="15px">
         <IntroBanner />
       </Grid>
       <Grid md={4}>
-          <Box mx="67.5px"> 
+          <Box mx="67.5px" sx={{borderLeft: {md: "70px solid #f8f8fb"},
+       }}>
             <ConsultForm />
           </Box>
       </Grid>
@@ -29,3 +30,6 @@ const CustomSoftware = () => {
 };
 
 export default CustomSoftware;
+
+
+

@@ -8,7 +8,7 @@ const WhyUsSection = () => {
     <Grid
       container
       sx={{
-        my: "95px",
+        py: "95px",
         display: "flex",
         justifyContent: "center",
         flexDirection: "row-reverse",

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import LogoRed from "../../assets/images/logo/nexxt-white.png";
 import LogoBlack from "../../assets/images/logo/nexxt-black.png";
 import { Box, Button, Grid } from "@mui/material";
@@ -25,12 +25,13 @@ const Header = () => {
   };
 
   window.addEventListener("scroll", changeNavBG);
-
+  
   return (
+    
     <>
       <Box
         sx={{
-          backgroundColor: window.location.pathname === "/" && navbar ? "#282526" : "",
+          backgroundColor: window.location.pathname === "/" && navbar ? "#282526" : !navbar ? "" : window.location.pathname === "/services" ? "white": "",
           fontSize: "18px",
           position: "fixed",
           top: "0",
@@ -72,8 +73,6 @@ const Header = () => {
             <Link to="/careers" style={{ fontWeight: "bold", color: window.location.pathname === "/" ? "white" : "black", textDecoration: "none", marginRight: "15px" }}>Careers</Link>
             <Link to="/get-quote" style={{ textDecoration: "none", marginLeft: "15px" }}>
               <CustomButton text={"Get a Quote"} buttonSize={"10px 30px 10px 30px"} />
-
-
             </Link>
 
           </Box>

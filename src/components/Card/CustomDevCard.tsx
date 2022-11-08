@@ -13,11 +13,11 @@ const CustomDevCard = ({devCardTitles, devCardDetails}: CardProps) => {
         <Box
           key={index}
           sx={{
+            mb:"60px",
+            my:{xs:"20px"},
             position: "relative",
-            my: { xs: "45px" },
-            mb: "60px",
             width: { md: "435px", xs: "auto" },
-            height: { md: "380px", xs: "210px" },
+            height: { md: "380px", xs: "auto" },
             px: { md: "60px", xs: "40px" },
             display: "flex",
             justifycontent: "center",

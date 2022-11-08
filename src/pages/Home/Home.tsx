@@ -11,9 +11,8 @@ const Home = () => {
           "linear-gradient(to right top, #08080c, #2c2432, #593a52, #8e5068, #c46972, #d76e6d, #e87565, #f67e5b, #ef694c, #e8533f, #e13833, #d90429)",
       }}
     >
-      <Header />
+      {/* <Header /> */}
       <Main />
-      <FooterApp />
     </div>
   );
 };
