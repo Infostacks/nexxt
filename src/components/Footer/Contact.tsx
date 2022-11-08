@@ -1,5 +1,5 @@
 import React from "react";
-import Box from "@mui/material/Box";
+import { Box, Grid } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -9,12 +9,13 @@ import PinterestIcon from '@mui/icons-material/Pinterest';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 const Contact = () => {
   return (
-    <Box>
-      <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-        Contact Us
-      </Typography>
-
-      <Box sx={{ marginTop: 5 }}>
+    <Grid container>
+      <Grid item md={12} lg={12}>
+        <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+          Contact Us
+        </Typography>
+      </Grid>
+      <Grid sx={{ marginTop: 5 }}>
         <Typography
           variant="subtitle1"
           sx={{ fontWeight: "bold" }}
@@ -25,20 +26,20 @@ const Contact = () => {
 
         <Typography
           variant="subtitle1"
-          sx={{ fontWeight: "bold", margin: 2}}
+          sx={{ fontWeight: "bold", margin: 2 }}
           display="inline"
         >
           Email: info@tekrevol.com
         </Typography>
-      </Box>
+      </Grid>
 
-      <Box sx={{ marginTop: 2 }}>
+      <Grid sx={{ marginTop: 2 }}>
         <Typography variant="body1" display="inline">
           39899 Balentine Drive, Newark, CA 94560, United States
         </Typography>
-      </Box>
+      </Grid>
 
-      <Box
+      <Grid
         sx={{
           display: "flex",
           justifyContent: "center",
@@ -46,14 +47,14 @@ const Contact = () => {
           marginTop: 2,
         }}
       >
-        <FacebookIcon sx={{ height: 40, width: 40, '&:hover': {color: "#3135e8"} }} />
-        <TwitterIcon sx={{ height: 40, width: 40, '&:hover': {color: "#00d4ff"} }} />
-        <InstagramIcon sx={{ height: 40, width: 40, '&:hover': {color: "#cc3fb6"} }} />
-        <LinkedInIcon sx={{ height: 40, width: 40, '&:hover': {color: "#3135e8"} }} />
-        <PinterestIcon sx={{ height: 40, width: 40, '&:hover': {color: "#eb2309"} }} />
-        <YouTubeIcon sx={{ height: 40, width: 40, '&:hover': {color: "#da2912"} }} />
-      </Box>
-    </Box>
+        <FacebookIcon sx={{ height: 40, width: 40, '&:hover': { color: "#3135e8" } }} />
+        <TwitterIcon sx={{ height: 40, width: 40, '&:hover': { color: "#00d4ff" } }} />
+        <InstagramIcon sx={{ height: 40, width: 40, '&:hover': { color: "#cc3fb6" } }} />
+        <LinkedInIcon sx={{ height: 40, width: 40, '&:hover': { color: "#3135e8" } }} />
+        <PinterestIcon sx={{ height: 40, width: 40, '&:hover': { color: "#eb2309" } }} />
+        <YouTubeIcon sx={{ height: 40, width: 40, '&:hover': { color: "#da2912" } }} />
+      </Grid>
+    </Grid>
   );
 };
 
