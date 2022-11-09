@@ -14,7 +14,7 @@ const CustomDevIndustries = () => {
       sx={{
         py: "95px",
         display: "flex",
-        justifyContent: "space-evenly",
+        justifyContent: "space-around",
         //   alignItems: "center",
         //   bgcolor: "#f8f8fb"
       }}

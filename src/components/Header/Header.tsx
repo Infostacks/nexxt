@@ -74,7 +74,6 @@ const Header = () => {
             <Link to="/get-quote" style={{ textDecoration: "none", marginLeft: "15px" }}>
               <CustomButton text={"Get a Quote"} buttonSize={"10px 30px 10px 30px"} />
             </Link>
-
           </Box>
         </Box>
       </Box>

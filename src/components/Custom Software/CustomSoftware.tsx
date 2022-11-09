@@ -20,8 +20,7 @@ const CustomSoftware = () => {
         <IntroBanner />
       </Grid>
       <Grid md={4}>
-          <Box mx="67.5px" sx={{borderLeft: {md: "70px solid #f8f8fb"},
-       }}>
+          <Box mx="67.5px" >
             <ConsultForm />
           </Box>
       </Grid>
@@ -30,6 +29,5 @@ const CustomSoftware = () => {
 };
 
 export default CustomSoftware;
-
 
 

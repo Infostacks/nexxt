@@ -6,8 +6,9 @@ import FaqsSection from "./FaqsSection";
 import {
   faqsSummaries,
   faqsDetails,
-  devCardTitles,
-  devCardDetails,
+  whyUsProps,
+  buildAndVisualizeProps,
+  workNumbersProps,
 } from "../../assets/Strings/Services/iphone-app-development/IphoneAppDevelopment";
 import CustomSoftware from "../Custom Software/CustomSoftware";
 import BusinessCustomCard from "../Global Components/BusinessCustomCard";
@@ -18,22 +19,16 @@ import Business from "../Global Components/Business";
 import CustomDevIndustries from "../Custom Dev Industries/CustomDevIndustries";
 
 const IphoneAppDevelopment = () => {
-  // const changeNavBG = () => {
-  //   window.scrollTo(0, 0);
-  // };
-
-  // window.addEventListener("scroll", changeNavBG);
   return (
-
     <>
       <CustomSoftware />
       <CustomDevIndustries/>
       <Business/>
       <BusinessCustomCard />
-      <WhyUsSection></WhyUsSection>
-      <BuildAndVisualize />
+      <WhyUsSection {...whyUsProps}/>
+      <BuildAndVisualize {...buildAndVisualizeProps}/>
       <EmergingTechnologies />
-      <WorkNumbers />
+      <WorkNumbers {...workNumbersProps}/>
       <FaqsSection
         faqsummaries={faqsSummaries}
         faqDetails={faqsDetails}
