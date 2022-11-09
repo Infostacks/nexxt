@@ -21,7 +21,8 @@ const CustomDevIndustries = () => {
     >
       <Grid item md={4}>
         <Box style={{ position: "sticky", top: 80 }}>
-          <IntroBanner />
+        <IntroBanner heading1="Custom Software Development Services
+for" heading2="Businesses of All Sizes" subtitle1="We create custom, high-impact software solutions that empower businesses and enable them to lead with automation." subtitle2="Our custom software development services provide our partners and clients with the freedom to grow and scale at unprecedented rates. We help startups, medium-sized businesses, and enterprise-grade organizations to build performance-oriented systems." />
         </Box>
       </Grid>
 
