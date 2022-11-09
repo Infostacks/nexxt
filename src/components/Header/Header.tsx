@@ -4,8 +4,58 @@ import LogoBlack from "../../assets/images/logo/nexxt-black.png";
 import { Box, Button, Grid } from "@mui/material";
 import CustomButton from "../CustomButton";
 import { Link, NavLink } from "react-router-dom";
+import NavButton from "../Global Components/NavButton";
 
 const Header = () => {
+  const btnArr = [{
+    buttonTitle: "SERVICES",
+    menuItemDetails: [{
+      title: "CUSTOM SOFTWARE DEVELOPMENT",
+      linkTo: "/services"
+    },
+    {
+      title: " IPHONE APP DEVELOPMENT",
+      linkTo: "/"
+    },
+    {
+      title: " ANDROID APP DEVELOPMENT",
+      linkTo: "/"
+    }]
+
+  }, {
+    buttonTitle: "SOLUTIONS",
+    menuItemDetails: [{
+      title: "AUTOMATIVE APP DEVELOPMENT",
+      linkTo: "/"
+    },
+    {
+      title: "HEALTHCARE APP DEVELOPMENT",
+      linkTo: "/services"
+    },]
+
+  }, {
+    buttonTitle: "LOCATIONS",
+    menuItemDetails: [{
+      title: "USA",
+      linkTo: "/services"
+    },
+    {
+      title: "CANADA",
+      linkTo: "/"
+    },]
+
+  }, {
+    buttonTitle: "INSIGHTS",
+    menuItemDetails: [{
+      title: "ABOUT",
+      linkTo: "/services"
+    },
+    {
+      title: "BLOGS",
+      linkTo: "/"
+    },]
+
+  },]
   const [navbar, setNavbar] = useState(false);
   const linkColor = "white"
   console.log(window.location.pathname === "/")
@@ -25,13 +75,13 @@ const Header = () => {
   };
 
   window.addEventListener("scroll", changeNavBG);
-  
+
   return (
-    
+
     <>
       <Box
         sx={{
-          backgroundColor: window.location.pathname === "/" && navbar ? "#282526" : !navbar ? "" : window.location.pathname === "/services" ? "white": "",
+          backgroundColor: window.location.pathname === "/" && navbar ? "#282526" : !navbar ? "" : window.location.pathname === "/services" ? "white" : "",
           fontSize: "18px",
           position: "fixed",
           top: "0",
@@ -64,13 +114,12 @@ const Header = () => {
             </Box>
           </Link>
 
-          <Box >
-            <NavLink to="/" style={({ fontWeight: "bold", color: window.location.pathname === "/" ? "white" : "black", textDecoration: "none", marginRight: "15px" })}>Home</NavLink>
-            <Link to="/services" style={{ fontWeight: "bold", color: window.location.pathname === "/" ? "white" : "black", textDecoration: "none", marginRight: "15px" }}>Services</Link>
-            <Link to="/portfolio" style={{ fontWeight: "bold", color: window.location.pathname === "/" ? "white" : "black", textDecoration: "none", marginRight: "15px" }}>Portfolio</Link>
-            <Link to="/blogs" style={{ fontWeight: "bold", color: window.location.pathname === "/" ? "white" : "black", textDecoration: "none", marginRight: "15px" }}>Blogs</Link>
-            <Link to="/gallery" style={{ fontWeight: "bold", color: window.location.pathname === "/" ? "white" : "black", textDecoration: "none", marginRight: "15px" }}>Gallery</Link>
-            <Link to="/careers" style={{ fontWeight: "bold", color: window.location.pathname === "/" ? "white" : "black", textDecoration: "none", marginRight: "15px" }}>Careers</Link>
+          <Box style={{ display: "flex" }}>
+            <NavLink to="/" style={({ marginRight: "15px", textDecoration: "none" })}><Button onClick={handleClick} sx={{ fontWeight: "bold", color: window.location.pathname === "/" ? "white" : "black" }}>Home </Button></NavLink>
+            {btnArr.map((obj, index) => (
+              <Box style={{ marginRight: "15px" }} key={index}><NavButton title={obj.buttonTitle} menuObj={obj.menuItemDetails} /></Box>
+            ))}
+            <NavLink to="/" style={({ marginRight: "15px", textDecoration: "none" })}><Button onClick={handleClick} sx={{ fontWeight: "bold", color: window.location.pathname === "/" ? "white" : "black" }}>Portfolio </Button></NavLink>
             <Link to="/get-quote" style={{ textDecoration: "none", marginLeft: "15px" }}>
               <CustomButton text={"Get a Quote"} buttonSize={"10px 30px 10px 30px"} />
             </Link>
