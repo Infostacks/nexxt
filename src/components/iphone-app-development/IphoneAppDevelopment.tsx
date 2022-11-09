@@ -32,7 +32,7 @@ const IphoneAppDevelopment = () => {
       <BusinessCustomCard />
       <WhyUsSection></WhyUsSection>
       <BuildAndVisualize />
-      <EmergingTechnologies />
+      <EmergingTechnologies heading1="Powering Your Solutions With" heading2="Emerging Technologies" subtitle1="Our custom software development solutions are powered by some of the disruptive, emerging technologies. These programming languages and technologies help us build revolutionary software solutions with a forward-thinking approach."/>
       <WorkNumbers />
       <FaqsSection
         faqsummaries={faqsSummaries}
