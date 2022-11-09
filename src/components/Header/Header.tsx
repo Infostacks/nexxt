@@ -11,11 +11,11 @@ const Header = () => {
     buttonTitle: "SERVICES",
     menuItemDetails: [{
       title: "CUSTOM SOFTWARE DEVELOPMENT",
-      linkTo: "/services"
+      linkTo: "/custom_software"
     },
     {
       title: " IPHONE APP DEVELOPMENT",
-      linkTo: "/"
+      linkTo: "/iphone"
     },
     {
       title: " ANDROID APP DEVELOPMENT",

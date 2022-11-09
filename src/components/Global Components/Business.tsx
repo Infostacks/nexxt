@@ -1,12 +1,8 @@
 import React from 'react'
 import { Box, Typography, Stack } from "@mui/material"
-import BusinessCustomCard from './BusinessCustomCard'
-import CustomButton from './CustomButton'
-import BuildAndVisualize from './BuildAndVisualize'
-import EmergingTechnologies from './EmergingTechnologies';
-interface businessProps {
-    heading1: string, heading2: string, heading3: string, subtitle1: string, subtitle2: string, subtitle3: string
-}
+
+import { businessProps } from '../../assets/Strings/Services/customSoftwareDevelopment/customSoftwareDevelopment'
+
 const Business = ({ heading1, heading2, heading3, subtitle1, subtitle2, subtitle3 }: businessProps) => {
     return (
         <Box sx={{ height: "auto", backgroundColor: "#F8F8FB", paddingY: 10, paddingX: 12, }}>

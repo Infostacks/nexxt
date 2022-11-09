@@ -49,7 +49,7 @@ export interface WhyUsProps {
   whyUsReasons?: string[];
 }
 
-export const  whyUsProps: WhyUsProps = {
+export const whyUsProps: WhyUsProps = {
   whyUsImgLink: "https://www.tekrevol.com/assets/images-new/services/ios/sec04_img.png",
   whyUsImgwidth: { xs: "355px", md: "457px" },
   whyUsImgheight: { xs: "433px", md: "560px" },

@@ -1,13 +1,9 @@
 import React from 'react'
 import { Typography, Grid, Box } from "@mui/material"
+import { emergingTechnologiesProps } from '../../assets/Strings/Services/customSoftwareDevelopment/customSoftwareDevelopment'
 
-interface emergingTechnologiesProps {
-    heading1: string,
-    heading2: string,
-    subtitle1: string
-}
-const EmergingTechnologies = ({ heading1, heading2, subtitle1 }: emergingTechnologiesProps) => {
-    const images = ["https://www.tekrevol.com/assets/images-new/services/custom-software/2.png", "https://www.tekrevol.com/assets/images-new/services/custom-software/4.png", "https://www.tekrevol.com/assets/images-new/services/ios/tech_icon3.png", "https://www.tekrevol.com/assets/images-new/services/custom-software/6.png", "https://www.tekrevol.com/assets/images-new/services/custom-software/8.png", "https://www.tekrevol.com/assets/images-new/services/custom-software/10.png", "https://www.tekrevol.com/assets/images-new/services/custom-software/12.png", "https://www.tekrevol.com/assets/images-new/services/custom-software/13.png"]
+const EmergingTechnologies = ({ heading1, heading2, subtitle1, images }: emergingTechnologiesProps) => {
+   
     return (
         <Grid container justifyContent="center" sx={{ marginTop: 2 }}>
             <Grid item md={5} justifyContent="center" sx={{ paddingLeft: 1 }}>
