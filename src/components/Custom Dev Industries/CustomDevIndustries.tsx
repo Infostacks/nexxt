@@ -1,19 +1,19 @@
 import { Box, Grid } from "@mui/material";
 import React from "react";
-import {
-  devCardDetails,
-  devCardTitles,
-} from "../../assets/Strings/Services/customSoftwareDevelopment/customSoftwareDevelopment"; 
 import CustomDevCard from "../Card/CustomDevCard";
 import IntroBanner from "../Global Components/IntroBanner";
 import { introBannerProps } from "../../assets/Strings/Services/customSoftwareDevelopment/customSoftwareDevelopment";
+import { IntroProps } from "../Global Components/IntroBanner";
 
-export interface devCardProps {
-  devCardDetails: string[];
+export interface CustomDevIndustriesProps {
   devCardTitles: string[];
+  devCardDetails: string[];
+  introBannerProps: IntroProps;
 }
 
-const CustomDevIndustries = () => {
+
+
+const CustomDevIndustries = ({devCardTitles, devCardDetails, introBannerProps}: CustomDevIndustriesProps) => {
   return (
     <Grid
       container
@@ -42,3 +42,8 @@ const CustomDevIndustries = () => {
 };
 
 export default CustomDevIndustries;
+
+
+
+
+

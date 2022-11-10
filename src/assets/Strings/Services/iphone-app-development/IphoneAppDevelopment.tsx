@@ -9,20 +9,28 @@ import WatchIcon from '@mui/icons-material/Watch';
 import { WhyUsProps } from "../../../../components/WhyUsSection";
 import { WorkNumbersProps } from "../../../../components/Global Components/WorkNumbers";
 import { BuildAndVisualizeProps } from "../../../../components/Global Components/BuildAndVisualize";
+import { CustomDevIndustriesProps } from "../../../../components/Custom Dev Industries/CustomDevIndustries";
+import { IntroProps } from "../../../../components/Global Components/IntroBanner";
 
-export const devCardTitles: string[] = [
-  "iPhone Application Development",
-  "iPhone Application Development",
-  "iPhone Application Development",
-  "iPhone Application Development",
-];
+export const introBannerProps : IntroProps = {
+  heading1:"Custom Software Development Services for", heading2: "Businesses of All Sizes", subtitle1: "We create custom, high-impact software solutions that empower businesses and enable them to lead with automation.", subtitle2: "Our custom software development services provide our partners and clients with the freedom to grow and scale at unprecedented rates. We help startups, medium-sized businesses, and enterprise-grade organizations to build performance-oriented systems." 
+}
 
-export const devCardDetails: string[] = [
-  "iPhone applications are all about offering a revolutionary and seamless experience to the users. Our iPhone app developers ignite their creativity to develop an innovative and inspiring iOS app design that aligns your business with what iOS users expect from Apple’s ecosystem.",
-  "iPhone applications are all about offering a revolutionary and seamless experience to the users. Our iPhone app developers ignite their creativity to develop an innovative and inspiring iOS app design that aligns your business with what iOS users expect from Apple’s ecosystem.",
-  "iPhone applications are all about offering a revolutionary and seamless experience to the users. Our iPhone app developers ignite their creativity to develop an innovative and inspiring iOS app design that aligns your business with what iOS users expect from Apple’s ecosystem.",
-  "iPhone applications are all about offering a revolutionary and seamless experience to the users. Our iPhone app developers ignite their creativity to develop an innovative and inspiring iOS app design that aligns your business with what iOS users expect from Apple’s ecosystem.",
-];
+export const customDevIndustriesProps: CustomDevIndustriesProps = {
+  devCardTitles: [
+    "iPhone Application Development",
+    "iPhone Application Development",
+    "iPhone Application Development",
+    "iPhone Application Development",
+  ],
+  devCardDetails: [
+    "iPhone applications are all about offering a revolutionary and seamless experience to the users. Our iPhone app developers ignite their creativity to develop an innovative and inspiring iOS app design that aligns your business with what iOS users expect from Apple’s ecosystem.",
+    "iPhone applications are all about offering a revolutionary and seamless experience to the users. Our iPhone app developers ignite their creativity to develop an innovative and inspiring iOS app design that aligns your business with what iOS users expect from Apple’s ecosystem.",
+    "iPhone applications are all about offering a revolutionary and seamless experience to the users. Our iPhone app developers ignite their creativity to develop an innovative and inspiring iOS app design that aligns your business with what iOS users expect from Apple’s ecosystem.",
+    "iPhone applications are all about offering a revolutionary and seamless experience to the users. Our iPhone app developers ignite their creativity to develop an innovative and inspiring iOS app design that aligns your business with what iOS users expect from Apple’s ecosystem.",
+  ],
+  introBannerProps: {...introBannerProps}
+}
 
 export const faqsSummaries: string[] = [
   "What is custom software development?",

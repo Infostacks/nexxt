@@ -15,7 +15,7 @@ const CustomSoftwareDevelopment = () => {
     return (
         <>
             <CustomSoftware />
-            <CustomDevIndustries />
+            {/* <CustomDevIndustries /> */}
             <Business {...businessProps} />
             <BusinessCustomCard />
             <WhyUsSection {...whyUsProps}></WhyUsSection>
