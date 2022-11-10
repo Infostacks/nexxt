@@ -41,7 +41,7 @@ const IntroBanner = ({ heading1, heading2, subtitle1, subtitle2 }: IntroProps) =
         </Typography>
 
         <CustomButton
-          text={"BUILD MY IOS App!"}
+          text={"Let’s Talk About Your Software!"}
           buttonSize={"6px 35px"}
         ></CustomButton>
       </Box>

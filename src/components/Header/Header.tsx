@@ -95,7 +95,7 @@ const Header = () => {
         }}
       >
         <Box sx={{
-          backgroundColor: window.location.pathname === "/" && navbar ? "#282526" : !navbar ? "" : "white",
+          backgroundColor: window.location.pathname === "/" && navbar ? "" : !navbar ? "" : "white",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -117,7 +117,7 @@ const Header = () => {
           <Box style={{ display: "flex" }}>
             <NavLink to="/" style={({ marginRight: "15px", textDecoration: "none" })}><Button onClick={handleClick} sx={{ fontWeight: "bold", color: window.location.pathname === "/" ? "white" : "black" }}>Home </Button></NavLink>
             {btnArr.map((obj, index) => (
-              <Box style={{ marginRight: "15px" }} key={index}><NavButton title={obj.buttonTitle} menuObj={obj.menuItemDetails} /></Box>
+              <Box style={{ marginRight: "15px" }} key={index}><NavButton title={obj.buttonTitle} menuObj={obj.menuItemDetails}/></Box>
             ))}
             <NavLink to="/" style={({ marginRight: "15px", textDecoration: "none" })}><Button onClick={handleClick} sx={{ fontWeight: "bold", color: window.location.pathname === "/" ? "white" : "black" }}>Portfolio </Button></NavLink>
             <Link to="/get-quote" style={{ textDecoration: "none", marginLeft: "15px" }}>

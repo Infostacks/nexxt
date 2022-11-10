@@ -6,6 +6,7 @@ import { BuildAndVisualizeProps } from "../../../../components/Global Components
 import { EmergingTechnologiesProps } from "../../../../components/Global Components/EmergingTechnologies";
 import { BusinessProps } from "../../../../components/Global Components/Business";
 import { IntroProps } from "../../../../components/Global Components/IntroBanner";
+import { CustomDevIndustriesProps } from "../../../../components/Custom Dev Industries/CustomDevIndustries";
 
 export const introBannerProps : IntroProps = {
   heading1:"Custom Software Development Services for", heading2: "Businesses of All Sizes", subtitle1: "We create custom, high-impact software solutions that empower businesses and enable them to lead with automation.", subtitle2: "Our custom software development services provide our partners and clients with the freedom to grow and scale at unprecedented rates. We help startups, medium-sized businesses, and enterprise-grade organizations to build performance-oriented systems." 
@@ -19,19 +20,20 @@ export const emergingTechnologiesProps: EmergingTechnologiesProps = {
 }
 
 
-export const devCardTitles: string[] = [
-  "Ideation and Strategy",
-  "Design and Development",
-  "Testing",
-  "Deployment and Installation",
-];
-
-export const devCardDetails: string[] = [
-  "We discuss the client’s expectations, set project deliverables, and mark timelines for project budgeting and scope. The business analysis includes a research phase where our R&D teams conduct a thorough competitor analysis and check if the existing products in the industry match the expectations set by the clients, the unique features and the cost of existing software solutions.",
-  "Our design and development teams work together during the wireframing and prototyping stages. The technical development starts with steps like backend, frontend, access, and API integration.",
-  "Once a custom software is ready, QA and beta testing departments induct data, demonstrate the working of different user panels, generate reports and test the product in every way possible to understand how it will function in different situations and for different users.",
-  "Once all boxes in the product development lifecycle are checked, and our clients have approved, we release the product for real-time functioning. The final product provides a humanized experience of all that’s virtually possible!",
-];
+export const customDevIndustriesProps: CustomDevIndustriesProps = {
+  devCardTitles: [
+    "Ideation and Strategy",
+    "Design and Development",
+    "Testing",
+    "Deployment and Installation",
+  ],
+  devCardDetails: [
+    "We discuss the client’s expectations, set project deliverables, and mark timelines for project budgeting and scope. The business analysis includes a research phase where our R&D teams conduct a thorough competitor analysis and check if the existing products in the industry match the expectations set by the clients, the unique features and the cost of existing software solutions.",
+    "Our design and development teams work together during the wireframing and prototyping stages. The technical development starts with steps like backend, frontend, access, and API integration.",
+    "Once a custom software is ready, QA and beta testing departments induct data, demonstrate the working of different user panels, generate reports and test the product in every way possible to understand how it will function in different situations and for different users.",
+    "Once all boxes in the product development lifecycle are checked, and our clients have approved, we release the product for real-time functioning. The final product provides a humanized experience of all that’s virtually possible!", ],
+  introBannerProps: {...introBannerProps}
+}
 
 export const faqsSummaries: string[] = [
   "What is custom software development?",
@@ -54,8 +56,8 @@ export const faqsDetails: string[] = [
 
 export const whyUsProps: WhyUsProps = {
   whyUsImgLink: "https://www.tekrevol.com/assets/images-new/services/custom-software/software-development.png",
-  whyUsImgwidth: { xs: "355px", md: "457px" },
-  whyUsImgheight: { xs: "433px", md: "560px" },
+  whyUsImgwidth: { xs: "355px", md: "400px" },
+  whyUsImgheight: { xs: "433px", md: "auto" },
   whyUsTittle: "Why Choose Tekrevol",
   whyUsSubTittle: "As Your Partner with an Impact-Oriented Team?",
   WhyUsdescs: [

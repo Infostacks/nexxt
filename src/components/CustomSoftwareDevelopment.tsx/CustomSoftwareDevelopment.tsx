@@ -9,13 +9,13 @@ import EmergingTechnologies from '../Global Components/EmergingTechnologies'
 import WorkNumbers from '../Global Components/WorkNumbers'
 import FaqsSection from '../iphone-app-development/FaqsSection'
 import WhyUsSection from '../WhyUsSection'
-import { businessProps, emergingTechnologiesProps } from '../../assets/Strings/Services/customSoftwareDevelopment/customSoftwareDevelopment'
+import { businessProps, emergingTechnologiesProps, customDevIndustriesProps } from '../../assets/Strings/Services/customSoftwareDevelopment/customSoftwareDevelopment'
 
 const CustomSoftwareDevelopment = () => {
     return (
         <>
             <CustomSoftware />
-            {/* <CustomDevIndustries /> */}
+            <CustomDevIndustries {...customDevIndustriesProps} />
             <Business {...businessProps} />
             <BusinessCustomCard />
             <WhyUsSection {...whyUsProps}></WhyUsSection>
