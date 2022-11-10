@@ -43,6 +43,7 @@ const WhyUsSection = ({
         <Typography mb="20px">{WhyUsdescs[1]}</Typography>
         <Typography mb="20px">{WhyUsdescs[2]}</Typography>
 
+
         {whyUsReasons ? (
           <List disablePadding>
             {whyUsReasons.map((whyUsReason, index) => (
@@ -71,9 +72,8 @@ const WhyUsSection = ({
         ) : (
           <Typography></Typography>
         )}
-
         <CustomButton
-          text={"GET AN IOS APP FOR YOU BUSINESS!"}
+          text={"Get Custom Software For your Business!"}
           buttonSize={"6px 35px"}
         ></CustomButton>
       </Grid>

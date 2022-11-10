@@ -6,7 +6,7 @@ import {
 } from "@mui/material";
 import CustomButton from "../CustomButton";
 
-interface IntroProps {
+export interface IntroProps {
   heading1: string;
   heading2: string;
   subtitle1: string;

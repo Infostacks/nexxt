@@ -3,9 +3,9 @@ import React from "react";
 import {
   devCardDetails,
   devCardTitles,
-} from "../../assets/Strings/Services/iphone-app-development/IphoneAppDevelopment"; 
+} from "../../assets/Strings/Services/customSoftwareDevelopment/customSoftwareDevelopment"; 
 import CustomDevCard from "../Card/CustomDevCard";
-import IntroBanner from "../iphone-app-development/IntroBanner";
+import IntroBanner from "../Global Components/IntroBanner";
 
 export interface devCardProps {
   devCardDetails: string[];
@@ -18,7 +18,7 @@ const CustomDevIndustries = () => {
       container
       sx={{
         py: "95px",
-        display: "flex",
+        // display: "flex",
         justifyContent: "center",
         //   alignItems: "center",
         //   bgcolor: "#f8f8fb"

@@ -1,5 +1,5 @@
 import React from 'react'
-import { buildAndVisualizeProps, faqsDetails, faqsSummaries, whyUsProps, workNumbersProps } from '../../assets/Strings/Services/iphone-app-development/IphoneAppDevelopment'
+import { buildAndVisualizeProps, faqsDetails, faqsSummaries, whyUsProps, workNumbersProps } from '../../assets/Strings/Services/customSoftwareDevelopment/customSoftwareDevelopment'
 import CustomDevIndustries from '../Custom Dev Industries/CustomDevIndustries'
 import CustomSoftware from '../Custom Software/CustomSoftware'
 import BuildAndVisualize from '../Global Components/BuildAndVisualize'

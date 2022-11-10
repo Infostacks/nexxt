@@ -1,8 +1,14 @@
 import React from 'react'
 import { Typography, Grid, Box } from "@mui/material"
-import { emergingTechnologiesProps } from '../../assets/Strings/Services/customSoftwareDevelopment/customSoftwareDevelopment'
 
-const EmergingTechnologies = ({ heading1, heading2, subtitle1, images }: emergingTechnologiesProps) => {
+export interface EmergingTechnologiesProps {
+    heading1: string,
+    heading2: string,
+    subtitle1: string
+    images: string[];
+  }
+
+const EmergingTechnologies = ({ heading1, heading2, subtitle1, images }: EmergingTechnologiesProps) => {
    
     return (
         <Grid container justifyContent="center" sx={{ marginTop: 2 }}>

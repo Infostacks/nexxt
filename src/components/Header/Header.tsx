@@ -95,13 +95,13 @@ const Header = () => {
         }}
       >
         <Box sx={{
+          backgroundColor: window.location.pathname === "/" && navbar ? "#282526" : !navbar ? "" : "white",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
           height: "80px",
           margin: "0 auto",
           padding: "0 50px",
-          maxWidth: "1300px",
           width: "100%",
         }}>
           <Link to="/">
