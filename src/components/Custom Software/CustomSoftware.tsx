@@ -19,7 +19,7 @@ const CustomSoftware = () => {
       <Grid item md={6} lg={5} pr="15px">
         <IntroBanner {...introBannerProps} />
       </Grid>
-      <Grid item md={6} lg={4}>
+      <Grid item md={6} lg={4} pr="100px">
         {/* <Box  sx={{
           // borderLeft: { md: "70px solid #f8f8fb" },
         }}> */}
