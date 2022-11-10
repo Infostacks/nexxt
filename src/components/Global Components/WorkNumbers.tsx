@@ -1,6 +1,12 @@
 import React from "react";
 import { Grid, Typography } from "@mui/material";
-import { WorkNumbersProps } from "../../assets/Strings/Services/iphone-app-development/IphoneAppDevelopment";
+
+export interface WorkNumbersProps {
+  title: string;
+  desc: string;
+  statCounts: string[];
+  statDescs: string[]
+}
 
 const WorkNumbers = ({
   title,

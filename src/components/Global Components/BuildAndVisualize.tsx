@@ -2,7 +2,17 @@ import React from 'react'
 import { Box, Typography, Grid, List, ListItem, ListItemText } from "@mui/material"
 import CustomButton from './CustomButton'
 import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
-import { BuildAndVisualizeProps } from '../../assets/Strings/Services/iphone-app-development/IphoneAppDevelopment';
+
+export interface BuildAndVisualizeProps {
+    rightTitle: string;
+    rightDescs: string[];
+    rightListTitle: string;
+    rightListItems: string[];
+    rightListItemIcons: any[];
+    rightWhatElse?: string;
+    leftTitle: string[];
+    leftDescs: string[];
+  }
 
 const BuildAndVisualize = ({rightTitle, rightDescs, rightListTitle, rightListItems, rightListItemIcons, rightWhatElse, leftTitle, leftDescs}: BuildAndVisualizeProps) => {
                             

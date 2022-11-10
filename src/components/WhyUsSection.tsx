@@ -1,7 +1,16 @@
 import { Grid, List, ListItem, Typography } from "@mui/material";
 import React from "react";
 import CustomButton from "./Global Components/CustomButton";
-import { WhyUsProps } from "../assets/Strings/Services/iphone-app-development/IphoneAppDevelopment";
+
+export interface WhyUsProps {
+  whyUsImgLink: string;
+  whyUsImgwidth: object;
+  whyUsImgheight: object;
+  whyUsTittle: string;
+  whyUsSubTittle: string;
+  WhyUsdescs: string[];
+  whyUsReasons?: string[];
+}
 
 const WhyUsSection = ({
   whyUsImgLink,

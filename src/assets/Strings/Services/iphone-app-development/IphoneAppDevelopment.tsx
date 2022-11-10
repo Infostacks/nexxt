@@ -6,6 +6,9 @@ import SchoolIcon from '@mui/icons-material/School';
 import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
 import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 import WatchIcon from '@mui/icons-material/Watch';
+import { WhyUsProps } from "../../../../components/WhyUsSection";
+import { WorkNumbersProps } from "../../../../components/Global Components/WorkNumbers";
+import { BuildAndVisualizeProps } from "../../../../components/Global Components/BuildAndVisualize";
 
 export const devCardTitles: string[] = [
   "iPhone Application Development",
@@ -39,15 +42,6 @@ export const faqsDetails: string[] = [
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem dolorem, error illum voluptatibus maiores odio! Voluptate minima voluptatum repellat. Unde animi laborum, debitis error eveniet ducimus! Cum, veritatis. Obcaecati, libero?",
 ];
 
-export interface WhyUsProps {
-  whyUsImgLink: string;
-  whyUsImgwidth: object;
-  whyUsImgheight: object;
-  whyUsTittle: string;
-  whyUsSubTittle: string;
-  WhyUsdescs: string[];
-  whyUsReasons?: string[];
-}
 
 export const whyUsProps: WhyUsProps = {
   whyUsImgLink: "https://www.tekrevol.com/assets/images-new/services/ios/sec04_img.png",
@@ -67,17 +61,6 @@ export const whyUsProps: WhyUsProps = {
     "We enable organizations in meeting the ever-evolving manifest and latent needs of their customers.",
     "We build apps that deliver great experiences to users instead of just features."
   ]
-}
-
-export interface BuildAndVisualizeProps {
-  rightTitle: string;
-  rightDescs: string[];
-  rightListTitle: string;
-  rightListItems: string[];
-  rightListItemIcons: any[];
-  rightWhatElse?: string;
-  leftTitle: string[];
-  leftDescs: string[];
 }
 
 export const  buildAndVisualizeProps: BuildAndVisualizeProps = {
@@ -114,13 +97,6 @@ export const  buildAndVisualizeProps: BuildAndVisualizeProps = {
     "Our ultimate goal is to deliver impeccable iOS app development services to our clients. What sets us apart is our determination to continuously iterate, ideate, and pivot towards being the most advanced iOS service providers in the market.",
     "In addition to that, when your app goes through numerous ingenious stages that are specifically designed to make sure that the app makes a significant impact on the market, the iOS app not only makes an impact but becomes a revenue-generating machine."
   ]
-}
-
-export interface WorkNumbersProps {
-  title: string;
-  desc: string;
-  statCounts: string[];
-  statDescs: string[]
 }
 
 export const  workNumbersProps: WorkNumbersProps = {
