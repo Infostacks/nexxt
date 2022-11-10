@@ -11,8 +11,6 @@ export interface CustomDevIndustriesProps {
   introBannerProps: IntroProps;
 }
 
-
-
 const CustomDevIndustries = ({devCardTitles, devCardDetails, introBannerProps}: CustomDevIndustriesProps) => {
   return (
     <Grid
