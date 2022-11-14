@@ -4,8 +4,6 @@ import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import { Button, Grid, SvgIconProps } from "@mui/material";
-import { Link } from "react-router-dom";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 interface CardProps {
   title: string;

@@ -1,22 +1,64 @@
-import React, { useState } from "react";
-import {
-  Nav,
-  NavbarContainer,
-  NavLogo,
-  MenuIcon,
-  Menu,
-  MenuLink,
-  MenuLinkBtn,
-  MenuItem,
-  MenuItemBtn,
-} from "./Header.styles";
+import React, { useEffect, useState } from "react";
 import LogoRed from "../../assets/images/logo/nexxt-white.png";
 import LogoBlack from "../../assets/images/logo/nexxt-black.png";
-import { Button } from "@mui/material";
+import { Box, Button, Grid } from "@mui/material";
+import CustomButton from "../CustomButton";
+import { Link, NavLink } from "react-router-dom";
+import NavButton from "../Global Components/NavButton";
 
 const Header = () => {
-  const [navbar, setNavbar] = useState(false);
+  const btnArr = [{
+    buttonTitle: "SERVICES",
+    menuItemDetails: [{
+      title: "CUSTOM SOFTWARE DEVELOPMENT",
+      linkTo: "/custom_software"
+    },
+    {
+      title: " IPHONE APP DEVELOPMENT",
+      linkTo: "/iphone"
+    },
+    {
+      title: " ANDROID APP DEVELOPMENT",
+      linkTo: "/"
+    }]
 
+  }, {
+    buttonTitle: "SOLUTIONS",
+    menuItemDetails: [{
+      title: "AUTOMATIVE APP DEVELOPMENT",
+      linkTo: "/"
+    },
+    {
+      title: "HEALTHCARE APP DEVELOPMENT",
+      linkTo: "/services"
+    },]
+
+  }, {
+    buttonTitle: "LOCATIONS",
+    menuItemDetails: [{
+      title: "USA",
+      linkTo: "/services"
+    },
+    {
+      title: "CANADA",
+      linkTo: "/"
+    },]
+
+  }, {
+    buttonTitle: "INSIGHTS",
+    menuItemDetails: [{
+      title: "ABOUT",
+      linkTo: "/services"
+    },
+    {
+      title: "BLOGS",
+      linkTo: "/"
+    },]
+
+  },]
+  const [navbar, setNavbar] = useState(false);
+  const linkColor = "white"
+  console.log(window.location.pathname === "/")
   //click is the initial state and setclick will be the update state
   const [click, setClick] = useState(false);
 
@@ -35,59 +77,55 @@ const Header = () => {
   window.addEventListener("scroll", changeNavBG);
 
   return (
+
     <>
-      <Nav
-        style={{
-          backgroundColor: navbar ? "#282526" : "",
+      <Box
+        sx={{
+          backgroundColor: window.location.pathname === "/" && navbar ? "#282526" : !navbar ? "" : window.location.pathname === "/services" ? "white" : "",
+          fontSize: "18px",
+          position: "fixed",
+          top: "0",
+          zIndex: "999",
+          width: "100%",
+          height: "70px",
+          transition: "linear 0.3s",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
-        <NavbarContainer>
-          <NavLogo to="/">
-            <img
-              style={{ height: "50px" }}
-              src={navbar ? LogoRed : LogoBlack}
-              alt="Workflow"
-            />
-          </NavLogo>
-          <MenuIcon onClick={handleClick}></MenuIcon>
-          <Menu onClick={handleClick}>
-            <MenuItem>
-              <MenuLink to="/">Home</MenuLink>
-            </MenuItem>
-            <MenuItem>
-              <MenuLink to="/services">Services</MenuLink>
-            </MenuItem>
-            <MenuItem>
-              <MenuLink to="/portfolio">Portfolio</MenuLink>
-            </MenuItem>
-            <MenuItem>
-              <MenuLink to="/blogs">Blogs</MenuLink>
-            </MenuItem>
-            <MenuItem>
-              <MenuLink to="/gallery">Gallery</MenuLink>
-            </MenuItem>
-            <MenuItem>
-              <MenuLink to="/careers">Careers</MenuLink>
-            </MenuItem>
-            <MenuItemBtn>
-              <MenuLinkBtn to="/get-quote">
-                <Button
-                  sx={{
-                    fontWeight: "bold",
-                    borderRadius: "10px",
-                    color: "white",
-                    padding: "10px 30px 10px 30px",
-                    background:
-                      "linear-gradient(-90deg, #ffa20a 0, #fd4b0f 100%)",
-                  }}
-                >
-                  Get a Quote
-                </Button>
-              </MenuLinkBtn>
-            </MenuItemBtn>
-          </Menu>
-        </NavbarContainer>
-      </Nav>
+        <Box sx={{
+          backgroundColor: window.location.pathname === "/" && navbar ? "" : !navbar ? "" : "white",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          height: "80px",
+          margin: "0 auto",
+          padding: "0 50px",
+          width: "100%",
+        }}>
+          <Link to="/">
+            <Box >
+              <img
+                style={{ height: "50px" }}
+                src={navbar ? LogoRed : LogoBlack}
+                alt="Workflow"
+              />
+            </Box>
+          </Link>
+
+          <Box style={{ display: "flex" }}>
+            <NavLink to="/" style={({ marginRight: "15px", textDecoration: "none" })}><Button onClick={handleClick} sx={{ fontWeight: "bold", color: window.location.pathname === "/" ? "white" : "black" }}>Home </Button></NavLink>
+            {btnArr.map((obj, index) => (
+              <Box style={{ marginRight: "15px" }} key={index}><NavButton title={obj.buttonTitle} menuObj={obj.menuItemDetails}/></Box>
+            ))}
+            <NavLink to="/" style={({ marginRight: "15px", textDecoration: "none" })}><Button onClick={handleClick} sx={{ fontWeight: "bold", color: window.location.pathname === "/" ? "white" : "black" }}>Portfolio </Button></NavLink>
+            <Link to="/get-quote" style={{ textDecoration: "none", marginLeft: "15px" }}>
+              <CustomButton text={"Get a Quote"} buttonSize={"10px 30px 10px 30px"} />
+            </Link>
+          </Box>
+        </Box>
+      </Box>
     </>
   );
 };

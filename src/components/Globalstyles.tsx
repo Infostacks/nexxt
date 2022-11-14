@@ -29,7 +29,6 @@ body{
     font-size: 1.6rem;
     background: #F9F9F9;
     color: #333;
-
 }
 `;
 
