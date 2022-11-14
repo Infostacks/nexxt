@@ -1,10 +1,13 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation, Autoplay } from "swiper";
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Carousel } from "react-responsive-carousel";
+// import { Carousel } from "react-responsive-carousel";
+
 const Partnerships = () => {
   const corouselData = [
     {
@@ -44,13 +47,16 @@ const Partnerships = () => {
         "https://www.tekrevol.com/assets/images-new/badges/aws-cloud-practitioner.png",
     },
   ];
+
   return (
     <Box
       sx={{
-        // display: "flex",
         backgroundColor: "#f5f7fa",
+        display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
-        padding: "100px 0 0 0",
+        gap: 5,
+        padding: "100px 0 100px 0",
         height: "auto",
         width: "100%",
       }}
@@ -83,48 +89,69 @@ const Partnerships = () => {
       <Box
         style={{
           height: "250px",
-
           color: "black",
-          // border: "2px solid black",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          padding: 2,
         }}
       >
         <Swiper
-          slidesPerView={3}
-          spaceBetween={0}
-          slidesPerGroup={1}
+          modules={[Navigation, Autoplay]}
+          // slidesPerView={8}
+          // spaceBetween={15}
+          navigation={true}
           loop={true}
-          loopFillGroupWithBlank={true}
+          speed={2100}
+          autoplay={{
+            delay: 2000,
+          }}
+          breakpoints={{
+            1280: {
+              slidesPerView: 8,
+              spaceBetween: 15,
+            },
+            1024: {
+              slidesPerView: 5,
+              spaceBetween: 50,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            480: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+          }}
         >
           {corouselData.map((carouselObj, index) => (
             <SwiperSlide key={index}>
               <Box
                 position="relative"
                 sx={{
-                  // border: "2px solid black",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",
                   alignItems: "center",
-                  padding: 10,
                 }}
               >
                 <Box
-                  width="auto"
-                  height="120px"
+                  width="250px"
+                  height="auto"
                   src={carouselObj.image}
                   component="img"
                 ></Box>
                 <Box sx={{ marginTop: 2 }}>
-                  <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+                  <Typography variant="subtitle2" sx={{ fontWeight: "bold" }}>
                     {carouselObj.heading1}
                   </Typography>
                 </Box>
                 <Box>
-                  <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
+                  <Typography variant="body2" sx={{ width: "fit-content" }}>
                     {carouselObj.heading2}
                   </Typography>
                 </Box>
@@ -132,34 +159,6 @@ const Partnerships = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        ;
-        {/* <Carousel
-          showThumbs={false}
-          infiniteLoop={true}
-          autoPlay={true}
-          interval={1000}
-          width={500}
-          showArrows={false}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              width: "20vw",
-              border: "2px solid black",
-              height: "200px",
-            }}
-          >
-            <Box sx={{border: "2px solid black",}}>this is slide 1</Box>
-          </Box>
-          <Box style={{ height: "300px", border: "2px solid black" }}>
-            this is slide 2
-          </Box>
-          <Box style={{ height: "300px", border: "2px solid black" }}>
-            this is slide 3
-          </Box>
-        </Carousel> */}
       </Box>
     </Box>
   );

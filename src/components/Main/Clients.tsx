@@ -4,10 +4,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import { Pagination, Navigation } from "swiper";
+import { Navigation } from "swiper";
 
 // interface ProjectsProps {
 //   imagesLinks: string;
@@ -21,14 +20,14 @@ import {
   names,
   imagesLinks,
   titles,
-} from "../assets/Strings/Clients";
+} from "../../assets/Strings/Clients";
 
 // {description, names, imagesLinks, titles}: ProjectsProps
 
 const Clients = () => {
   return (
-    <Box bgcolor="white" display="flex" justifyContent="center" py="90px">
-      <Box width="70%" px="15px">
+    <Box bgcolor="white" display="flex" justifyContent="center" py="100px">
+      <Box width="60%">
         <Box
           sx={{
             "&::after": {
@@ -40,8 +39,7 @@ const Clients = () => {
               width: "70px",
             },
           }}
-        >
-        </Box>
+        ></Box>
         <Typography ml="90px">TESTIMONIALS</Typography>
 
         <Typography variant="h4" pt="20px" mb="40px">
@@ -50,28 +48,17 @@ const Clients = () => {
 
         <Swiper
           slidesPerView={3}
-          spaceBetween={40}
-          slidesPerGroup={1}
+          spaceBetween={10}
           loop={true}
-          loopFillGroupWithBlank={true}
-          // pagination={{
-          //   clickable: true,
-          // }}
           navigation={true}
-          modules={[Pagination, Navigation]}
+          modules={[Navigation]}
         >
           {descriptions.map((description, index) => (
             <SwiperSlide key={index}>
-              <Box
-                position="relative"
-                sx={{
-                  width: "350px",
-                  height: "365px",
-                }}
-              >
+              <Box position="relative">
                 <Box
                   sx={{
-                    width: "350px",
+                    width: "325px",
                     height: "365px",
                   }}
                   src={imagesLinks[index]}
@@ -84,7 +71,7 @@ const Clients = () => {
                     bottom: "0px",
                     p: "15px",
                     display: "flex",
-                    width: "320px",
+                    width: "300px",
                     justifyContent: "space-between",
                   }}
                 >
@@ -103,9 +90,8 @@ const Clients = () => {
               <Typography
                 sx={{
                   m: "10px 0px",
-                  p: "0px 5px",
                   textAlign: "justify",
-                  width: "330px",
+                  width: "320px",
                 }}
               >
                 &quot;{description}&quot;

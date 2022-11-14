@@ -1,9 +1,11 @@
 import React from "react";
-import Projects from "../Projects";
-import Clients from "../Clients";
-import Services from "../Services/Services";
-import Partnerships from "../Partnerships/Partnerships";
+import Projects from "./Projects";
+import Clients from "./Clients";
+import Services from "./Services/Services";
+import Partnerships from "./Partnerships/Partnerships";
 import CarouselComponent from "./CarouselComponent";
+
+import { Parallax } from "react-scroll-parallax";
 
 import {
   descriptions,
@@ -12,8 +14,7 @@ import {
   catList,
   logoLink,
 } from "../../assets/Strings/Projects";
-import CustomButton from "../CustomButton";
-import AwardsCard from "../Card/AwardsCard";
+import AwardsCard from "./AwardsCard";
 
 const Main = () => {
   return (
@@ -23,15 +24,17 @@ const Main = () => {
       <Partnerships />
 
       {descriptions.map((description, index) => (
-        <Projects
-          key={description}
-          description={description}
-          color={color[index]}
-          imagesLinks={imagesLinks[index]}
-          catList={catList[index]}
-          logoLink={logoLink[index]}
-        />
+        <Parallax translateY={[-20, 10]} key={description}>
+          <Projects
+            description={description}
+            color={color[index]}
+            imagesLinks={imagesLinks[index]}
+            catList={catList[index]}
+            logoLink={logoLink[index]}
+          />
+        </Parallax>
       ))}
+
       <Clients />
       <AwardsCard />
     </>

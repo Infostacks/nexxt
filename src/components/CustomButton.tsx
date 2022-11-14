@@ -14,6 +14,7 @@ const CustomButton = ({text, buttonSize}: ButtonProps) => {
               borderRadius: "10px",
               color: "white",
               padding: buttonSize,
+              letterSpacing: 3,
               background: "linear-gradient(-90deg, #ffa20a 0, #fd4b0f 100%)",
             }}
           >

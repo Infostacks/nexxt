@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Autoplay, Navigation } from "swiper";
 
 import {
   descriptions,
@@ -17,7 +17,7 @@ import {
 const AwardsCard = () => {
   return (
     <Box bgcolor="white" py="50px">
-      <Box width="98%" px="15px">  
+      <Box width="98%" px="15px">
         <Box ml="15%">
           <Box
             sx={{
@@ -39,13 +39,39 @@ const AwardsCard = () => {
         </Box>
 
         <Swiper
-          slidesPerView={4.5}
-          spaceBetween={0}
+          // slidesPerView={6}
+          // spaceBetween={0}
           slidesPerGroup={1}
           loop={true}
+          speed={2100}
+          autoplay={{
+            delay: 2000,
+          }}
+          breakpoints={{
+            1280: {
+              slidesPerView: 6,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 0,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 0,
+            },
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 0,
+            },
+            480: {
+              slidesPerView: 1,
+              spaceBetween: 0,
+            },
+          }}
           loopFillGroupWithBlank={true}
           navigation={true}
-          modules={[Pagination, Navigation]}
+          modules={[Pagination, Autoplay, Navigation]}
         >
           {descriptions.map((description, index) => (
             <SwiperSlide key={index}>
@@ -56,6 +82,15 @@ const AwardsCard = () => {
                   m: "20px",
                   borderRadius: "15px",
                   boxShadow: "2",
+                  ":hover": {
+                    transition: "ease-in",
+                    transitionDuration: ".09s",
+                    boxShadow: "4",
+                    scale: "1.05",
+                    background:
+                      "linear-gradient(-138deg, #f37a20 0, #ef5123 55%, #ee3824 100%)",
+                    color: "white",
+                  },
                   width: "251px",
                 }}
               >
@@ -70,9 +105,13 @@ const AwardsCard = () => {
                 <Box mt="20px">
                   <Typography
                     variant="h5"
+                    fontWeight="bold"
                     textAlign="center"
                     mb="8px"
                     fontSize="16px"
+                    sx={{
+                      letterSpacing: 2,
+                    }}
                   >
                     {titles[index]}
                   </Typography>
@@ -90,4 +129,3 @@ const AwardsCard = () => {
 };
 
 export default AwardsCard;
-
