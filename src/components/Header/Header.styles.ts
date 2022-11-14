@@ -21,6 +21,7 @@ export const NavbarContainer = styled(Container)`
   justify-content: space-between;
   align-items: center;
   height: 80px;
+  
   ${Container};
 `;
 

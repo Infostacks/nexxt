@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import Box from "@mui/material/Box";
+import { Box, Grid } from "@mui/material";
 import React from "react";
 import Bottom from "./Bottom";
 import Contact from "./Contact";
@@ -28,7 +28,7 @@ const menu = [
   },
 ];
 
-// const SocialList = () => (
+
 //   <>
 //     <Twitter />
 //     <Facebook />
@@ -38,37 +38,23 @@ const menu = [
 
 function FooterApp() {
   return (
-    <Box sx={{ backgroundColor: "white", height: 400, position: "relative" }}>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          
-        }}
-      >
-        <Box sx={{ borderRight: "1px solid gray", height: "100%",width: "33%", marginX: 2, marginY: 5, padding: 2 }}>
+    <>
+      <Grid container padding={1} justifyContent="center">
+        <Grid item xs={12} sm={12} md={4} padding={2} paddingLeft={6} sx={{ borderRight: "1px solid gray" }} >
           <Contact />
-        </Box>
-        <Box sx={{ borderRight: "1px solid gray", height: "100%", width: "33%", marginX: 2, marginY: 5  }}>
+        </Grid>
+        <Grid item xs={12} sm={12} md={4} padding={2} paddingLeft={6} sx={{ borderRight: "1px solid gray" }}>
           <InTouch />
-        </Box>
-        <Box sx={{ height: "100%", width: "33%", marginX: 2, marginY: 5  }}>
+        </Grid>
+        <Grid item xs={12} sm={12} md={4} padding={2} paddingLeft={6}>
           <Estimate />
-        </Box>
-      </Box>
-      <Box
-        sx={{
-          bottom: 0,
-          backgroundColor: "white",
-          height: 50,
-          position: "absolute",
-          width: "100%",
-          borderTop: "1px solid gray",
-        }}
-      >
+        </Grid>
+      </Grid>
+
+      <Grid>
         <Bottom />
-      </Box>
-    </Box>
+      </Grid>
+    </>
   );
 }
 export default FooterApp;
