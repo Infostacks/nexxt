@@ -1,11 +1,15 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import "../../index.css";
+import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Carousel } from "react-responsive-carousel";
+import { Autoplay, Pagination, Navigation } from "swiper";
 const Partnerships = () => {
+  const theme = useTheme()
+  console.log("theme", theme)
+  const isMatch = useMediaQuery(theme.breakpoints.down("md"))
   const corouselData = [
     {
       heading1: "AWS Certified ",
@@ -44,15 +48,19 @@ const Partnerships = () => {
         "https://www.tekrevol.com/assets/images-new/badges/aws-cloud-practitioner.png",
     },
   ];
+
   return (
     <Box
+
       sx={{
-        // display: "flex",
+        display: "flex",
         backgroundColor: "#f5f7fa",
         justifyContent: "center",
+        alignItems: "center",
         padding: "100px 0 0 0",
         height: "auto",
-        width: "100%",
+        flexDirection: "column",
+        // width: "100%",
       }}
     >
       <Box
@@ -60,44 +68,49 @@ const Partnerships = () => {
           display: "flex",
           flexDirection: "column",
           backgroundColor: "#f5f7fa",
-          justifyContent: "start",
+          justifyContent: "center",
           alignItems: "center",
           textAlign: "center",
-          width: "100%",
+          // width: "100%",
         }}
       >
-        <Box sx={{ width: 600 }}>
-          <Typography variant="h2" fontWeight="bold" fontSize="30px">
-            Making A Difference Through Strategic Technology Partnerships
+        <Box sx={{ width: { xs: 400, md: 600, xl: 600 } }}>
+          <Typography variant="h4" >
+            Changing The World With Emerging Technology Alliances
           </Typography>
         </Box>
-        <Box sx={{ width: 700, marginTop: 5 }}>
-          <Typography>
-            We contribute to these partnership programs, supported by global
-            technology experts. Partnering with industry leaders, we offer
-            quality technology solutions that meet your business needs.
+        <Box sx={{ width: { xs: 350, md: 700, xl: 600 }, marginTop: 5 }}>
+          <Typography variant="body1">
+            In support of these collaborative initiatives, we provide our expertise. collaborating with leaders in the sector. We provide top-notch technological options to suit your company requirements.
           </Typography>
         </Box>
       </Box>
 
       <Box
-        style={{
+        sx={{
           height: "250px",
-
+          // marginLeft: { md: "120px", xl: "180px" },
           color: "black",
           // border: "2px solid black",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           padding: 2,
+          width: { xs: "100vw", xl: "70vw", md: "90vw" },
+
         }}
       >
         <Swiper
-          slidesPerView={3}
+          slidesPerView={isMatch ? 1 : 3}
           spaceBetween={0}
           slidesPerGroup={1}
           loop={true}
           loopFillGroupWithBlank={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay]}
         >
           {corouselData.map((carouselObj, index) => (
             <SwiperSlide key={index}>
@@ -110,6 +123,7 @@ const Partnerships = () => {
                   justifyContent: "center",
                   alignItems: "center",
                   padding: 10,
+
                 }}
               >
                 <Box
@@ -119,12 +133,12 @@ const Partnerships = () => {
                   component="img"
                 ></Box>
                 <Box sx={{ marginTop: 2 }}>
-                  <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+                  <Typography variant="h3" fontSize="20px" sx={{ fontFamily: "Gilroy-Bold", fontWeight: "bold" }} >
                     {carouselObj.heading1}
                   </Typography>
                 </Box>
                 <Box>
-                  <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
+                  <Typography variant="body1" >
                     {carouselObj.heading2}
                   </Typography>
                 </Box>

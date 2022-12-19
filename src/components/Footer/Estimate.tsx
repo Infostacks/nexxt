@@ -2,6 +2,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import CustomButton from "../Global Components/CustomButton";
 const Estimate = () => {
   return (
     <Box>
@@ -10,8 +11,8 @@ const Estimate = () => {
           Estimate Your Project’s Cost
         </Typography>
       </Box>
-      <Box sx={{ marginTop: 5 }}>
-        <Typography>
+      <Box sx={{ marginTop: 5, width: {xs: "80vw", md: "25vw"} }}>
+        <Typography textAlign={"justify"}>
           Use our project cost estimator to get a cost estimate for your project
           based on start agency pricing and compare with our pricing to measure
           your savings.
@@ -19,18 +20,7 @@ const Estimate = () => {
       </Box>
 
       <Box sx={{ marginTop: 5, display: "flex", justifyContent: "center" }}>
-        <Button
-          variant="contained"
-          sx={{
-            fontWeight: "bold",
-            borderRadius: "10px",
-            color: "white",
-            padding: "10px 30px 10px 30px",
-            background: "linear-gradient(-90deg, #ffa20a 0, #fd4b0f 100%)",
-          }}
-        >
-          GET FREE PRICING
-        </Button>
+       <CustomButton text="GET FREE PRICING" buttonSize="10px 30px"/>
       </Box>
     </Box>
   );

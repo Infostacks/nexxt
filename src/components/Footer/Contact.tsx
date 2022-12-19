@@ -7,6 +7,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import { Link } from "react-router-dom";
 const Contact = () => {
   return (
     <Box>
@@ -46,12 +47,14 @@ const Contact = () => {
           marginTop: 2,
         }}
       >
-        <FacebookIcon sx={{ height: 40, width: 40, '&:hover': {color: "#3135e8"} }} />
-        <TwitterIcon sx={{ height: 40, width: 40, '&:hover': {color: "#00d4ff"} }} />
-        <InstagramIcon sx={{ height: 40, width: 40, '&:hover': {color: "#cc3fb6"} }} />
-        <LinkedInIcon sx={{ height: 40, width: 40, '&:hover': {color: "#3135e8"} }} />
-        <PinterestIcon sx={{ height: 40, width: 40, '&:hover': {color: "#eb2309"} }} />
-        <YouTubeIcon sx={{ height: 40, width: 40, '&:hover': {color: "#da2912"} }} />
+        <Link to='https://www.facebook.com/nexxtai'> <FacebookIcon sx={{ color: "black", height: 40, width: 40, '&:hover': { color: "#3135e8" } }} /> </Link>
+        <Link to="https://twitter.com/nexxt_ai">
+          <TwitterIcon sx={{ color: "black", height: 40, width: 40, '&:hover': { color: "#00d4ff" } }} /> </Link>
+        <InstagramIcon sx={{ height: 40, width: 40, '&:hover': { color: "#cc3fb6" } }} />
+        <Link to="https://www.linkedin.com/company/next-horizon-inc/">
+          <LinkedInIcon sx={{ color: "black", height: 40, width: 40, '&:hover': { color: "#3135e8" } }} /> </Link>
+        <PinterestIcon sx={{ height: 40, width: 40, '&:hover': { color: "#eb2309" } }} />
+        <YouTubeIcon sx={{ height: 40, width: 40, '&:hover': { color: "#da2912" } }} />
       </Box>
     </Box>
   );

@@ -10,7 +10,7 @@ const Bottom = () => {
     "SITEMAP",
   ];
   return (
-    <Box sx={{ display: "flex", justifyContent: "space-between", marginX: "10px"}}>
+    <Box sx={{ display: "flex", justifyContent: "space-between", marginX: "10px", flexDirection: {xs: "column", md: "row"}}}>
       
       <Box sx={{ display: "flex", marginY: "15px" }}>
         {footerBottom.map((str, index) => (

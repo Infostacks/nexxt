@@ -1,5 +1,6 @@
 import React from "react";
 import FooterApp from "../../components/Footer/Footer";
+import SideBanner from "../../components/Global Components/SideBanner";
 import Header from "../../components/Header/Header";
 import Main from "../../components/Main/Main";
 
@@ -8,15 +9,14 @@ const Home = () => {
     <div
       style={{
         background:
-          "linear-gradient(to right top, #08080c, #2c2432, #593a52, #8e5068, #c46972, #d76e6d, #e87565, #f67e5b, #ef694c, #e8533f, #e13833, #d90429)",
+          "linear-gradient(135deg, rgba(13,19,38,1) 0%, rgba(252,26,5,1) 23%, rgba(246,29,7,1) 61%)",
       }}
     >
-      <Header />
+      {/* <Header /> */}
       <Main />
 
-      <FooterApp />
+      {/* <FooterApp /> */}
     </div>
   );
 };
-
 export default Home;

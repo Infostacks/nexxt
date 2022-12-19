@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
+import CustomButton from "../Global Components/CustomButton";
 const InTouch = () => {
-  const btnTitle = " LET'S GET IN TOUCH ";
+
+  const [value, setValue] = useState("Web");
+
+  const handleChange = (e : any) => {
+        setValue(e.target.value)
+  }
+
   return (
     <Box>
       <Box>
@@ -21,7 +28,8 @@ const InTouch = () => {
         <Select
           labelId="label"
           id="select"
-          value="Web"
+          value={value}
+          onChange={handleChange}
           sx={{
             width: 500,
             maxWidth: "90%",
@@ -30,6 +38,7 @@ const InTouch = () => {
         >
           <MenuItem value="Web">Web Development</MenuItem>
           <MenuItem value="Android">Android Development</MenuItem>
+          <MenuItem value="Cross Platform App">Cross Platform App</MenuItem>
         </Select>
       </Box>
       <Box
@@ -43,18 +52,7 @@ const InTouch = () => {
       </Box>
 
       <Box sx={{ marginTop: 3, display: "flex", justifyContent: "center" }}>
-        <Button
-          variant="contained"
-          sx={{
-            fontWeight: "bold",
-            borderRadius: "10px",
-            color: "white",
-            padding: "10px 30px 10px 30px",
-            background: "linear-gradient(-90deg, #ffa20a 0, #fd4b0f 100%)",
-          }}
-        >
-          {btnTitle}
-        </Button>
+        <CustomButton text="LET'S GET IN TOUCH" buttonSize="10px 30px" />
       </Box>
     </Box>
   );

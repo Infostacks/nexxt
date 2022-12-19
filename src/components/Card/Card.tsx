@@ -3,9 +3,9 @@ import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { Button, Grid, SvgIconProps } from "@mui/material";
+import { Box, SvgIconProps } from "@mui/material";
 import { Link } from "react-router-dom";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import EastIcon from '@mui/icons-material/East';
 
 interface CardProps {
   title: string;
@@ -19,78 +19,53 @@ export default function ServicesCard({ title, description, icon }: CardProps) {
 
   //   const onMouseOver = () => console.log(setHover({ color: "white" }));
   return (
-    <Card
-      //   onMouseOver={onMouseOver}
-      onMouseOut={() => console.log("out")}
-      sx={{
-        maxWidth: 340,
-        height: 290,
-        ":hover": {
-          background:
-            "linear-gradient(-138deg, #f37a20 0, #ef5123 55%, #ee3824 100%)",
-          color: "white",
-        },
-        borderRadius: "0px",
-      }}
-    >
-      <CardHeader
-        sx={{ paddingLeft: "40px", paddingTop: "50px" }}
-        avatar={icon}
-        title={
-          <Typography fontSize="17px" fontWeight="bold">
-            {title}
-          </Typography>
-        }
-      />
-      <CardContent>
-        <Typography
-          sx={{ padding: "0 40px 40px 40px" }}
-          fontFamily="Gilroy-Regular"
-          fontWeight="400"
-          //   color="#061327"
-          lineHeight="22px"
-          fontSize="14px"
-          variant="body2"
-          //   color="text.secondary"
-        >
-          {description}
-        </Typography>
-
-        {/* <Grid
-          container
-          direction="row"
-          alignItems="center"
-          fontSize="12px"
-          sx={{ float: "right" }}
-        >
-          <Typography icon flexDirection="row" alignItems="center">
-          Get More Info <ArrowForwardIcon fontSize="small" />
-          </Typography>
-        </Grid> */}
-
-        {/* <Button
-          //   sx={{
-          //     float: "right",
-          //     // color: out,
-          //     fontSize: "10px",
-          //     fontWeight: "bold",
-          //   }}
-          variant="text"
-          endIcon={<ArrowForwardIcon />}
-        >
-          Get More Info
-        </Button> */}
-        {/* <Link
-            sx={{ float: "right" }}
-            color="#ee3824"
-            href="#"
-            underline="none"
-            
+    <Box position="relative">
+      <Card
+        //   onMouseOver={onMouseOver}
+        onMouseOut={() => console.log("out")}
+        sx={{
+          maxWidth: 340,
+          height: 290,
+          ":hover": {
+            background:
+              "linear-gradient(-138deg, #f37a20 0, #ef5123 55%, #ee3824 100%)",
+            color: "white",
+            transition: "0.3s",
+           
+          },
+          "& .MuiSvgIcon-root": {
+            fontSize: "55px"
+          },
+          borderRadius: "0px",
+        }}
+      >
+        <CardHeader
+          sx={{ paddingLeft: "40px", paddingTop: "50px"}}
+          avatar={icon}
+          title={
+            <Typography variant="h5" fontSize="17px" fontWeight="bold" className="font-bold">
+              {title}
+            </Typography>
+          }
+        />
+        <CardContent>
+          <Typography
+            sx={{ padding: "0 40px 0px 40px", }}
+            fontWeight="400"
+            lineHeight="20px"
+            fontSize="14px"
+            variant="body2"
+            className="font-medium"
           >
-            {"Get More Info"}
-            <ArrowForwardIcon />
-          </Link> */}
-      </CardContent>
-    </Card>
+            {description}
+          </Typography>
+          <Typography display="flex" sx={{ fontWeight: "bold", position: "absolute", right: "80px", lineHeight: 2.5 }} className="font-bold">Get More Info  </Typography>
+          <EastIcon sx={{ mt: "8px", position: "absolute", right: "35px", height: "25px" }} />
+        </CardContent>
+        {/* <Box display="flex" justifyContent="end" alignItems="center" sx={{ color: "#ee3824" }}> */}
+
+        {/* </Box> */}
+      </Card>
+    </Box>
   );
 }

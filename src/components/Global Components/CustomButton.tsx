@@ -1,21 +1,27 @@
 import React from "react";
-import { Button } from "@mui/material";
+import { Button, useTheme } from "@mui/material";
+
 
 interface ButtonProps {
   text: string;
   buttonSize: string;
+  margin? : string
 }
 
-const CustomButton = ({ text, buttonSize }: ButtonProps) => {
+const CustomButton = ({ text, buttonSize, margin }: ButtonProps) => {
+  const theme = useTheme()
   return (
     <Button
       sx={{
         fontWeight: "bold",
-        borderRadius: "10px",
+        // borderRadius: "10px",
         color: "white",
         padding: buttonSize,
-        background: "linear-gradient(-90deg, #ffa20a 0, #fd4b0f 100%)",
+        marginY: margin,
+        background: `${theme.palette.background.default}`
       }}
+      // color="primary"
+      className="font-bold"
     >
       {text}
     </Button>

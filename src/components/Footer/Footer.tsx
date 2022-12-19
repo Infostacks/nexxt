@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-key */
-import Box from "@mui/material/Box";
+import { Box, Grid, useTheme, useMediaQuery } from "@mui/material";
 import React from "react";
 import Bottom from "./Bottom";
 import Contact from "./Contact";
@@ -37,25 +37,22 @@ const menu = [
 // );
 
 function FooterApp() {
+  const theme = useTheme()
+  const ismd = useMediaQuery(theme.breakpoints.only("lg"))
+  const isxs = useMediaQuery(theme.breakpoints.only("xs"))
   return (
-    <Box sx={{ backgroundColor: "white", height: 400, position: "relative" }}>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          
-        }}
-      >
-        <Box sx={{ borderRight: "1px solid gray", height: "100%",width: "33%", marginX: 2, marginY: 5, padding: 2 }}>
+    <Box position={"relative"}>
+      <Grid container padding={1} justifyContent="center" >
+        <Grid item xs={12} sm={12} md={3.5} padding={1} paddingLeft={4} sx={isxs ? { borderBottom: "1px solid gray" } : { borderRight: "1px solid gray" }} >
           <Contact />
-        </Box>
-        <Box sx={{ borderRight: "1px solid gray", height: "100%", width: "33%", marginX: 2, marginY: 5  }}>
+        </Grid>
+        <Grid item xs={12} sm={12} md={3.5} padding={1} paddingLeft={4} sx={isxs ? { borderBottom: "1px solid gray" } : { borderRight: "1px solid gray" }}>
           <InTouch />
-        </Box>
-        <Box sx={{ height: "100%", width: "33%", marginX: 2, marginY: 5  }}>
+        </Grid>
+        <Grid item xs={12} sm={12} md={3.5} padding={1} sx={{ height: "100%", width: "33%", marginX: 2, marginY: 5 }}>
           <Estimate />
-        </Box>
-      </Box>
+        </Grid>
+      </Grid>
       <Box
         sx={{
           bottom: 0,
@@ -63,7 +60,7 @@ function FooterApp() {
           height: 50,
           position: "absolute",
           width: "100%",
-          borderTop: "1px solid gray",
+          // borderTop: "1px solid gray",
         }}
       >
         <Bottom />
