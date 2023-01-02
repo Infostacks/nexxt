@@ -6,25 +6,28 @@ import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
 import CustomButton from "../Global Components/CustomButton";
+import { useTheme } from "@mui/material"
 const InTouch = () => {
+
+  const theme = useTheme()
 
   const [value, setValue] = useState("Web");
 
-  const handleChange = (e : any) => {
-        setValue(e.target.value)
+  const handleChange = (e: any) => {
+    setValue(e.target.value)
   }
 
   return (
     <Box>
       <Box>
         <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-          Got an idea?
+          Wanna get updates ?
         </Typography>
         <Typography variant="h5" sx={{ fontWeight: "bold" }}>
           Let’s get in touch!
         </Typography>
       </Box>
-      <Box>
+      {/* <Box>
         <Select
           labelId="label"
           id="select"
@@ -40,19 +43,19 @@ const InTouch = () => {
           <MenuItem value="Android">Android Development</MenuItem>
           <MenuItem value="Cross Platform App">Cross Platform App</MenuItem>
         </Select>
-      </Box>
+      </Box> */}
       <Box
         sx={{
           width: 500,
           maxWidth: "90%",
-          marginTop: 1,
+          marginTop: 5,
         }}
       >
         <TextField fullWidth label="Enter email" id="fullWidth" />
       </Box>
 
       <Box sx={{ marginTop: 3, display: "flex", justifyContent: "center" }}>
-        <CustomButton text="LET'S GET IN TOUCH" buttonSize="10px 30px" />
+        <CustomButton text="LET'S GET IN TOUCH" buttonSize="10px 30px" background={`${theme.palette.background.default}`} />
       </Box>
     </Box>
   );

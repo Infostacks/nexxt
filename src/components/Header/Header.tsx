@@ -23,15 +23,15 @@ const Header = ({ logourl }: headerprops) => {
       linkTo: "/crossplatform"
     },
     {
-      title: "START APP DEVELOPMENT",
+      title: "START UP APP DEVELOPMENT",
       linkTo: "/startup_app_development"
     }]
 
   }, {
     buttonTitle: "SOLUTIONS",
     menuItemDetails: [{
-      title: "AUTOMATIVE APP DEVELOPMENT",
-      linkTo: "/"
+      title: "E-commerence APP DEVELOPMENT",
+      linkTo: "/ecommerence"
     },
     {
       title: "HEALTHCARE APP DEVELOPMENT",
@@ -41,12 +41,8 @@ const Header = ({ logourl }: headerprops) => {
   }, {
     buttonTitle: "LOCATIONS",
     menuItemDetails: [{
-      title: "USA",
-      linkTo: "/services"
-    },
-    {
-      title: "CANADA",
-      linkTo: "/"
+      title: "NEW YORK",
+      linkTo: "/newyorkcity"
     },]
 
   }, {
@@ -60,12 +56,7 @@ const Header = ({ logourl }: headerprops) => {
       linkTo: "/"
     },]
 
-  }, {
-    buttonTitle: "PORTFOLIO",
-    menuItemDetails: []
-
-  }
-
+  },
   ]
   const [navbar, setNavbar] = useState(false);
   const changeNavBG = () => {
@@ -103,7 +94,7 @@ const Header = ({ logourl }: headerprops) => {
             // left: "0",
             zIndex: "999",
             width: "100vw",
-            height: "70px",
+            height: "60px",
             paddingY: navbar ? 0 : 8,
             display: "flex",
             justifyContent: "space-around",
@@ -126,12 +117,17 @@ const Header = ({ logourl }: headerprops) => {
               {btnArr.map((obj, index) => (
                 <Box sx={{ marginRight: "15px", "&:hover": { borderBottom: 2, borderBottomColor: "orangeRed" }, marginTop: "10px", height: "45px" }} key={index}><NavButton title={obj.buttonTitle} menuObj={obj.menuItemDetails} navbar={navbar} /></Box>
               ))}
+              <Link to={"/portfolio"} style={{ textDecoration: "none" }}>
 
-              <Link to="/get-quote" style={{ textDecoration: "none", marginLeft: "15px", fontWeight: "normal", marginTop: "5px", height: "50px" }}>
-                <CustomButton text={"Get a Quote"} buttonSize={"7px 30px 7px 30px"} />
+                <Box sx={{ "&:hover": { borderBottom: 2, borderBottomColor: "orangeRed" }, marginTop: "10px", }}>
+                  <Button className='font-medium' sx={{ color: window.location.pathname !== "/" ? "black" : "white", fontSize: "12px" }}>PORTFOLIO</Button>
+                </Box>
               </Link>
               <Link to="/get-quote" style={{ textDecoration: "none", marginLeft: "15px", fontWeight: "normal", marginTop: "5px", height: "50px" }}>
-                <CustomButton text={"SignIn/Register"} buttonSize={"7px 30px 7px 30px"} />
+                <CustomButton text={"Get a Quote"} buttonSize={"7px 30px 7px 30px"} background={`${theme.palette.background.default}`} />
+              </Link>
+              <Link to="/get-quote" style={{ textDecoration: "none", marginLeft: "15px", fontWeight: "normal", marginTop: "5px", height: "50px" }}>
+                <CustomButton text={"SignIn/Register"} buttonSize={"7px 30px 7px 30px"} background={`${theme.palette.background.default}`} />
               </Link>
             </Box>
           </Box>

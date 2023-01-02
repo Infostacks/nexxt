@@ -5,10 +5,12 @@ import { Button, useTheme } from "@mui/material";
 interface ButtonProps {
   text: string;
   buttonSize: string;
-  margin? : string
+  margin?: string
+  handleClick?: any
+  background?: string
 }
 
-const CustomButton = ({ text, buttonSize, margin }: ButtonProps) => {
+const CustomButton = ({ text, buttonSize, margin, handleClick, background }: ButtonProps) => {
   const theme = useTheme()
   return (
     <Button
@@ -18,10 +20,11 @@ const CustomButton = ({ text, buttonSize, margin }: ButtonProps) => {
         color: "white",
         padding: buttonSize,
         marginY: margin,
-        background: `${theme.palette.background.default}`
+        background: `${background}`
       }}
       // color="primary"
       className="font-bold"
+      onClick={handleClick}
     >
       {text}
     </Button>

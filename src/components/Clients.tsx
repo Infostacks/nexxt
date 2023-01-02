@@ -55,7 +55,7 @@ const Clients = () => {
       </Box>
       <Box display="flex" justifyContent="center" alignItems="center" sx={{ marginLeft: { xs: "10px", md: "120px", xl: "180px" }, width: { xs: "100vw", md: "80vw", xl: "80vw" } }} >
         <Swiper
-          slidesPerView={isxs ? 1 : issm ? 1.75 : ismd ? 3 : 4.3}
+          slidesPerView={isxs ? 1 : issm ? 1.75 : ismd ? 3.3 : 4.3}
 
           slidesPerGroup={1}
           loop={true}
@@ -121,7 +121,7 @@ const Clients = () => {
                     m: "10px 0px",
                     p: "0px 5px",
                     textAlign: "justify",
-                    width: "310px",
+                    width: "280px",
 
                   }}
                 >

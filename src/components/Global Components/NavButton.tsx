@@ -14,6 +14,8 @@ interface menuItemDetailsprop {
     linkTo: string;
 }
 
+
+
 const NavButton = ({ title, menuObj }: navButtonProps) => {
 
     const [open, setOpen] = useState(false)
@@ -34,6 +36,7 @@ const NavButton = ({ title, menuObj }: navButtonProps) => {
             <Button className='font-medium' sx={{ color: window.location.pathname !== "/" ? "black" : "white", fontSize: "12px" }} onClick={handleClick} >{title} {menuObj.length >= 1 ? <ArrowDropDownIcon fontSize='small' /> : <
 
                 ></>}</Button>
+
             <Box width={100} sx={{ "& .MuiPaper-root": { minWidth: "0px" } }}>
                 <Menu anchorEl={anchorElm} open={open} onClose={handleClose} sx={{ "& .MuiList-root": { padding: "0px 0px", "&:hover": { backgroundColor: "#282526" } }, "& .MuiPopover-root": { paddingRight: 0 } }} >
                     <Box onMouseLeave={handleClose} >

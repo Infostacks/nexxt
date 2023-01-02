@@ -41,12 +41,12 @@ function FooterApp() {
   const ismd = useMediaQuery(theme.breakpoints.only("lg"))
   const isxs = useMediaQuery(theme.breakpoints.only("xs"))
   return (
-    <Box position={"relative"}>
+    <Box position={"relative"} >
       <Grid container padding={1} justifyContent="center" >
-        <Grid item xs={12} sm={12} md={3.5} padding={1} paddingLeft={4} sx={isxs ? { borderBottom: "1px solid gray" } : { borderRight: "1px solid gray" }} >
+        <Grid item xs={12} sm={12} md={3.5} padding={1} paddingLeft={4} sx={isxs ? { borderBottom: "1px solid gray" } : { borderRight: "1px solid gray",  marginY: 5 }} >
           <Contact />
         </Grid>
-        <Grid item xs={12} sm={12} md={3.5} padding={1} paddingLeft={4} sx={isxs ? { borderBottom: "1px solid gray" } : { borderRight: "1px solid gray" }}>
+        <Grid item xs={12} sm={12} md={3.5} padding={1} paddingLeft={4} sx={isxs ? { borderBottom: "1px solid gray" } : { borderRight: "1px solid gray",  marginY: 5 }}>
           <InTouch />
         </Grid>
         <Grid item xs={12} sm={12} md={3.5} padding={1} sx={{ height: "100%", width: "33%", marginX: 2, marginY: 5 }}>

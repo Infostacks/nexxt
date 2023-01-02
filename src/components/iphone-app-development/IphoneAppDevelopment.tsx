@@ -33,7 +33,7 @@ const IphoneAppDevelopment = () => {
       <Box
         // border={2}
         sx={{
-          pt: { xs: "0px", md: "50px", xl: "100px" },
+          pt: { xs: "0px", md: "70px", xl: "100px" },
           pb: "80px",
           display: "flex",
           justifyContent: "center",

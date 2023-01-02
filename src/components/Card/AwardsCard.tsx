@@ -65,7 +65,7 @@ const AwardsCard = () => {
                 marginLeft={isxs ? "65px" : "0px"}
                 sx={{
                   bgcolor: "white",
-                  p: "40px 20px",
+                  p: "15px 15px",
                   marginBottom: "2px",
                   borderRadius: "15px",
                   boxShadow: 2,
@@ -114,4 +114,3 @@ const AwardsCard = () => {
 };
 
 export default AwardsCard;
-

@@ -9,22 +9,22 @@ import {
 import AddIcon from "@mui/icons-material/Add";
 
 interface FaqsProps {
-  heading1: string,
-  heading2: string,
+  heading1?: string,
+  heading2?: string,
   faqsummaries: string[],
   faqDetails: string[]
 }
 
-const FaqsSection = ({heading1, heading2, faqsummaries, faqDetails }: FaqsProps) => {
+const FaqsSection = ({ heading1, heading2, faqsummaries, faqDetails }: FaqsProps) => {
   const [flag, setFlag] = React.useState<number | false>(false);
 
   const handleChange = (isExpanded: boolean, panel: number) => {
     setFlag(isExpanded ? panel : false);
   };
   return (
-    <Grid sx={{ pt: "95px", pb: "30px", paddingX: { xl: "270px"} }}>
+    <Grid sx={{  pb: "30px", paddingX: { xl: "270px" } }}>
       <Grid sx={{ px: "15px", mx: { md: "50px", xs: "0px" } }}>
-        <Typography variant="h4" mb="20px">
+        <Typography variant="h4" mb="20px" sx={{visibility: heading1 && heading2 === "" ? "hidden": "visible"}}>
           <Typography variant="h5" color="#7a7a7a" fontSize={"24px"} className="font-light">
             {heading1}
           </Typography>

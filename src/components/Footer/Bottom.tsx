@@ -21,7 +21,7 @@ const Bottom = () => {
       </Box>
       <Box sx={{ marginY: "15px" }}>
         <Typography variant="caption">
-          COPYRIGHT 2022 NEXXT ALL RIGHTS RESERVED.
+          COPYRIGHT 2023 NEXXT ALL RIGHTS RESERVED.
         </Typography>
       </Box>
     </Box>

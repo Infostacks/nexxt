@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: "";
 }
 
 body {
@@ -69,5 +69,21 @@ code {
 }
 
 .font-extrabold {
-  font-family: Gilroy-ExtraBold !important; 
+  font-family: Gilroy-ExtraBold !important;
+}
+
+.bounce-3 {
+  animation-name: bounce-3;
+  animation-timing-function: ease;
+}
+@keyframes bounce-3 {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
 }

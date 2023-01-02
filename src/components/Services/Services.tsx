@@ -1,12 +1,13 @@
 import React from "react";
 import RecipeReviewCard from "../Card/Card";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import AndroidIcon from "@mui/icons-material/Android";
 import TerminalIcon from "@mui/icons-material/Terminal";
 import AppleIcon from "@mui/icons-material/Apple";
 import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
 import CustomButton from "../Global Components/CustomButton";
 const Services = () => {
+  const theme = useTheme()
   const servicesData = [
     {
       icon: <TerminalIcon sx={{ marginLeft: "10px", color: "#f37a20", fontSize: "50px", }} />,
@@ -30,7 +31,6 @@ const Services = () => {
     <Box
       sx={{ backgroundColor: "#282526", flexDirection: { xs: "column-reverse", md: "row", xl: "row" }, height: { xl: "600px", xs: "auto", md: "650px" } }}
       padding="140px 0 0 0"
-
       display="flex"
       justifyContent="center"
       alignItems='center'
@@ -63,7 +63,6 @@ const Services = () => {
                 height: "2px",
                 position: "absolute",
                 marginBottom: "20px",
-
                 width: "70px",
               },
             }}
@@ -71,12 +70,12 @@ const Services = () => {
           <Typography sx={{ color: "white", left: "80px", position: "absolute", fontWeight: "bold" }}>Services</Typography>
         </Box>
         <Box sx={{ width: { md: "400px", xl: "500px" } }}>
-          <Typography variant="h4"  fontWeight="bold" lineHeight="45px" className="font-bold" sx={{ fontSize: { md: "35px" } }}>
+          <Typography variant="h4" fontWeight="bold" lineHeight="45px" className="font-bold" sx={{ fontSize: { md: "35px" } }}>
             Customized Software Programs and Mobile App Development
           </Typography>
         </Box>
         <Box sx={{ width: { md: "350px", xl: "500px", xs: "90%" } }}>
-          <Typography variant="body1" mt="10px"  textAlign={"justify"}>
+          <Typography variant="body1" mt="10px" textAlign={"justify"}>
             This is an era of a digital future & technology is getting polished everyday. Every digital touchpoint offers the chance to construct connections with customers and establish a brand with its target market. Nexxt offers digitalization, our developers are able to build customized software and complicated mobile apps in multiple languages and platforms.
           </Typography>
         </Box>
@@ -93,7 +92,7 @@ const Services = () => {
         >
           Lets Start
         </Button> */}
-        <CustomButton text="LET'S START" buttonSize="8px 30px" margin="10px"/>
+        <CustomButton text="LET'S START" buttonSize="8px 30px" margin="10px" background={`${theme.palette.background.default}`} />
       </Box>
     </Box>
   );

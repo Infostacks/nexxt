@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import imgA from "../../assets/images/CarouselImages/imgDD.png";
+import imgA from "../../assets/images/CarouselImages/imgFF.png";
 import imgB from "../../assets/images/CarouselImages/imgX.png";
 import imgC from "../../assets/images/CarouselImages/imgZ.png"
 import { Box, Button, Typography, useTheme, useMediaQuery } from "@mui/material";
@@ -38,16 +38,8 @@ const CarouselComponent = () => {
       image: imgC,
       btnText: "GET PROFESSIONAL HELP",
     },
-    // {
-    //   heading: "Custom Software Development Company",
-    //   description:
-    //     "Helping our partners and enterprises disrupt within their organizations and industries through user-centric software solutions",
-    //   image: img3,
-    //   btnText: "LET'S BUILD",
-    // },
+
   ];
-
-
 
   return (
 
@@ -191,7 +183,7 @@ const CarouselComponent = () => {
                 >
                   {carouselObj.btnText}
                 </Button> */}
-                <CustomButton text="GET A QUOTE" buttonSize="10px 30px" />
+                <CustomButton text="GET A QUOTE" buttonSize="10px 30px" background={`${theme.palette.background.default}`} />
               </Box>
             </Box>
 
@@ -234,14 +226,14 @@ const CarouselComponent = () => {
           },
           position: "absolute",
           bottom: 0,
-          right: { md: 70, xl: 350 },
+          right: { md: 60, xl: 340 },
           visibility: { xs: "hidden", md: "visible", xl: "visible" },
         }}
       >
         <Box display="inline" zIndex="1">
           <CarouselBottomDiv
             heading1="OUR PROJECTS"
-            heading2="AMJ Workplace Wellness | Driven by results"
+            heading2="Here's What we did in 2022"
             buttonTitle="Download Now"
             color="#ee3824"
             fileLink={"Nexxt Company Profile.pdf"}
@@ -251,7 +243,7 @@ const CarouselComponent = () => {
         <Box zIndex="1">
           <CarouselBottomDiv
             heading1="COMPANY PROFILE"
-            heading2="Here's What We Do in the GCC"
+            heading2="Learn more about our company"
             buttonTitle="Download Now"
             color="#3C4048"
           />

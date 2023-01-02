@@ -2,6 +2,7 @@ import { createTheme } from "@mui/material";
 
 export const customTheme = createTheme({
     palette: {
+
         background: {
             default: "linear-gradient(-90deg, #ffa20a 0, #fd4b0f 100%)"
         },
