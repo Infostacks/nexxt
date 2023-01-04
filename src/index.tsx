@@ -5,8 +5,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router } from "react-router-dom";
 import { useTheme } from "@mui/material";
-import { ParallaxProvider } from 'react-scroll-parallax';
-
+import { ParallaxProvider } from "react-scroll-parallax";
+import FormProvider from "./hooks/formContext";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -15,7 +15,9 @@ root.render(
   <React.StrictMode>
     <ParallaxProvider>
       <Router>
-        <App />
+        <FormProvider>
+          <App />
+        </FormProvider>
       </Router>
     </ParallaxProvider>
   </React.StrictMode>

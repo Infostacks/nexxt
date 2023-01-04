@@ -1,5 +1,12 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+            "@": ["./src"],
+            "@/*": ["./src/*"],
+            "@components": ["./src/components"],
+            "@nexxt":["./"],
+          },
     "target": "es5",
     "lib": [
       "dom",
@@ -16,11 +23,22 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    // "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx"
   },
   "include": [
     "src"
-  ]
+, "hooks", "config"  ]
+  
 }
+// {
+//   "compilerOptions": {
+//     "baseUrl": ".",
+//     "paths": {
+//       "@": ["./src"],
+//       "@/*": ["./src/*"],
+//       "@components": ["./src/components"]
+//     }
+//   }
+// }
