@@ -21,7 +21,7 @@ const CustomButton = ({ text, buttonSize, margin, handleClick, background }: But
         padding: buttonSize,
         marginY: margin,
         background: `${background}`
-      }}
+      }} 
       // color="primary"
       className="font-bold"
       onClick={handleClick}
