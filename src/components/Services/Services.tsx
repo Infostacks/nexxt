@@ -1,30 +1,37 @@
 import React from "react";
 import RecipeReviewCard from "../Card/Card";
 import { Box, Typography, useTheme } from "@mui/material";
-import AndroidIcon from "@mui/icons-material/Android";
+// import MobileFriendlyIcon from "@mui/icons-material/Android";
+import MobileFriendlyIcon from '@mui/icons-material/MobileFriendly';
 import TerminalIcon from "@mui/icons-material/Terminal";
-import AppleIcon from "@mui/icons-material/Apple";
-import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
+// import AppleIcon from "@mui/icons-material/Apple";
+import AirIcon from '@mui/icons-material/Air';
+// import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
+import FingerprintIcon from '@mui/icons-material/Fingerprint';
 import CustomButton from "../Global Components/CustomButton";
 const Services = () => {
   const theme = useTheme()
   const servicesData = [
     {
-      icon: <TerminalIcon sx={{ marginLeft: "10px", color: "#f37a20", fontSize: "50px", }} />,
-      title: "Software Development",
-      description: "Our committed teams have diverse developers and technical staff who can understand and develop your desired software."
+      icon: <TerminalIcon sx={{ marginLeft: "10px", color: "#f37a20", fontSize: "40px", }} />,
+      title: "Web Application Development",
+      description: "We design and build stunning, modern web applications from scratch with the latest technologies that are fast, performant, secure and scalabale.",
+      linkText: "Get a Demo"
     }, {
-      icon: <AndroidIcon sx={{ marginLeft: "10px", color: "#f37a20", fontSize: "50px", }} />,
-      title: "Android Application Development",
-      description: "We have experienced android developers who are devoted to building and launching android applications."
+      icon: <MobileFriendlyIcon sx={{ marginLeft: "10px", color: "#f37a20", fontSize: "40px", }} />,
+      title: "Mobile Application Development",
+      description: "Nexxt have brilliant Mobile Expert Teams that can build cross platform mobile apps blazing fast, saving development time and cost.",
+      linkText: "Learn More"
     }, {
-      icon: <AppleIcon sx={{ marginLeft: "10px", color: "#f37a20", fontSize: "50px", }} />,
-      title: "IPhone Application Development",
-      description: "We develop ios apps to provide the best user experience, We will help in your business needs to achieve your business goals."
+      icon: <AirIcon sx={{ marginLeft: "10px", color: "#f37a20", fontSize: "40px", }} />,
+      title: "AI First Development",
+      description: "The future is Artificially Super Intelligent and so are We, AI Experts that creates application for Automation, Accuracy and Correctness.",
+      linkText: "Talk to an AI Expert"
     }, {
-      icon: <SportsEsportsIcon sx={{ marginLeft: "10px", color: "#f37a20", fontSize: "50px", }} />,
-      title: "Game Development",
-      description: "We are capable of building complicated games. We provide game development solutions that hold and delight users."
+      icon: <FingerprintIcon sx={{ marginLeft: "10px", color: "#f37a20", fontSize: "40px", }} />,
+      title: "BlockChain and Financial Technology",
+      description: "Our experts combine cutting edge AI and blockchain technology to bring you platforms capable of handling the complex financial tasks of tomorrow, today.",
+      linkText: "Get More Info"
     },
   ]
   return (
@@ -47,6 +54,7 @@ const Services = () => {
               }
               title={servicesObj.title}
               description={servicesObj.description}
+              linkText={servicesObj.linkText}
             />
 
           </Box>
@@ -71,12 +79,12 @@ const Services = () => {
         </Box>
         <Box sx={{ width: { md: "400px", xl: "500px" } }}>
           <Typography variant="h4" fontWeight="bold" lineHeight="45px" className="font-bold" sx={{ fontSize: { md: "35px" } }}>
-            Customized Software Programs and Mobile App Development
+            An AI-First Web and Mobile Development Company
           </Typography>
         </Box>
         <Box sx={{ width: { md: "350px", xl: "500px", xs: "90%" } }}>
           <Typography variant="body1" mt="10px" textAlign={"justify"}>
-            This is an era of a digital future & technology is getting polished everyday. Every digital touchpoint offers the chance to construct connections with customers and establish a brand with its target market. Nexxt offers digitalization, our developers are able to build customized software and complicated mobile apps in multiple languages and platforms.
+            This is an era of a digital future & technology is getting polished everyday. Every digital touchpoint offers the chance to construct connections with customers and establish a brand with its target market. Nexxt AI is an AI First company, Our expert team workout the most complex problems with technology expertise knowledge and AI Strategies that creates Top of the line digital products for web, mobile and desktop.
           </Typography>
         </Box>
         {/* <Button

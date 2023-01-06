@@ -12,52 +12,207 @@ const Header = ({ logourl }: headerprops) => {
   const theme = useTheme()
   // console.log("theme", theme)
   const isMatch = useMediaQuery(theme.breakpoints.down("md"))
-  const btnArr = [{
-    buttonTitle: "SERVICES",
-    menuItemDetails: [{
-      title: "CUSTOM SOFTWARE DEVELOPMENT",
-      linkTo: "/custom_software"
+  const btnArr = [
+    {
+      buttonTitle: "SERVICES",
+      menuItemDetails: [
+        {
+          title: "CUSTOM APPLICATION DEVELOPMENT",
+          linkTo: "/custom_software",
+        },
+        {
+          title: "CROSS PLATFORM APP DEVELOPMENT",
+          linkTo: "/crossplatform",
+        },
+        {
+          title: "START UP APP DEVELOPMENT",
+          linkTo: "/startup_app_development",
+        },
+
+        {
+          title: "FULL STACK WEB DEVELOPMENT",
+          linkTo: "/startup_app_development",
+        },
+        {
+          title: "REACT APP DEVELOPMENT",
+          linkTo: "/startup_app_development",
+        },
+        {
+          title: "FLUTTERS APP DEVELOPMENT",
+          linkTo: "/startup_app_development",
+        },
+        {
+          title: "DEVOPS SERVICES",
+          linkTo: "/startup_app_development",
+        },
+        {
+          title: "DESKTOP APP DEVELOPMENT",
+          linkTo: "/startup_app_development",
+        },
+        {
+          title: "CUSTOM SOFTWARE DEVELOPMENT",
+          linkTo: "/startup_app_development",
+        },
+        {
+          title: "MOBILE APP DEVELOPMENT",
+          linkTo: "/startup_app_development",
+        },
+        {
+          title: "BLOCKCHAIN DEVELOPMENT",
+          linkTo: "/startup_app_development",
+        },
+        {
+          title: "AI APP DEVELOPMENT",
+          linkTo: "/startup_app_development",
+        },
+        {
+          title: "FINTECH DEVELOPMENT",
+          linkTo: "/startup_app_development",
+        },
+        
+      ],
     },
     {
-      title: "CROSS PLATFORM APP DEVELOPMENT",
-      linkTo: "/crossplatform"
+      buttonTitle: "SOLUTIONS",
+      menuItemDetails: [
+        {
+          title: "E-CCOMMERCE",
+          linkTo: "/ecommerence",
+        },
+        {
+          title: "HEALTHCARE TECHNOLOGY",
+          linkTo: "/services",
+        },
+        {
+          title: "AI RECRUITMENT",
+          linkTo: "/ecommerence",
+        },
+        {
+          title: "FINTECH",
+          linkTo: "/services",
+        },
+        {
+          title: "BLOCKCHAIN",
+          linkTo: "/ecommerence",
+        },
+        {
+          title: "DASHBOARDS",
+          linkTo: "/services",
+        },
+        {
+          title: "ADVANCE AI",
+          linkTo: "/ecommerence",
+        },
+        {
+          title: "SOCIAL MEDIA ENGINES",
+          linkTo: "/services",
+        },
+        {
+          title: "LMS/B2B/B2C/B2E",
+          linkTo: "/ecommerence",
+        },
+        {
+          title: "MOBILE APPS",
+          linkTo: "/services",
+        },
+        {
+          title: "WEARABLE TECHNOLOGY",
+          linkTo: "/ecommerence",
+        },
+        {
+          title: "ERP DEVELOPMENT",
+          linkTo: "/services",
+        },
+      ],
     },
     {
-      title: "START UP APP DEVELOPMENT",
-      linkTo: "/startup_app_development"
-    }]
-
-  }, {
-    buttonTitle: "SOLUTIONS",
-    menuItemDetails: [{
-      title: "E-commerence APP DEVELOPMENT",
-      linkTo: "/ecommerence"
+      buttonTitle: "STARTUPS",
+      menuItemDetails: [
+        {
+          title: "DISCOVERY PHASE",
+          linkTo: "/newyorkcity",
+        },
+        {
+          title: "MVP DEVELOPMENT",
+          linkTo: "/newyorkcity",
+        },
+        {
+          title: "CTO AS A SERVICE",
+          linkTo: "/newyorkcity",
+        },
+        {
+          title: "DEV-TEAM AS A SERVICE",
+          linkTo: "/newyorkcity",
+        },
+        {
+          title: "AI MARKETING",
+          linkTo: "/newyorkcity",
+        },
+      ],
     },
     {
-      title: "HEALTHCARE APP DEVELOPMENT",
-      linkTo: "/services"
-    },]
-
-  }, {
-    buttonTitle: "LOCATIONS",
-    menuItemDetails: [{
-      title: "NEW YORK",
-      linkTo: "/newyorkcity"
-    },]
-
-  }, {
-    buttonTitle: "INSIGHTS",
-    menuItemDetails: [{
-      title: "ABOUT",
-      linkTo: "/services"
+      buttonTitle: "LOCATIONS",
+      menuItemDetails: [
+        {
+          title: "NEW YORK, USA",
+          linkTo: "/newyorkcity",
+        },
+        {
+          title: "ATLANTA, USA",
+          linkTo: "/newyorkcity",
+        },
+        {
+          title: "LONDON, UK",
+          linkTo: "/newyorkcity",
+        },
+        {
+          title: "ONTARIO, CA",
+          linkTo: "/newyorkcity",
+        },
+        {
+          title: "DUBAI, UAE",
+          linkTo: "/newyorkcity",
+        },
+      ],
     },
     {
-      title: "BLOGS",
-      linkTo: "/"
-    },]
-
-  },
-  ]
+      buttonTitle: "INSIGHTS",
+      menuItemDetails: [
+        {
+          title: "NEXXT APP",
+          linkTo: "/services",
+        },
+        {
+          title: "LAUNCHES",
+          linkTo: "/",
+        },
+        {
+          title: "EVENTS",
+          linkTo: "/services",
+        },
+        {
+          title: "TESTIMONIALS",
+          linkTo: "/services",
+        },
+        {
+          title: "PROGRESS",
+          linkTo: "/",
+        },
+        {
+          title: "BLOGS",
+          linkTo: "/",
+        },
+        {
+          title: "NEWS",
+          linkTo: "/services",
+        },
+        {
+          title: "ABOUT",
+          linkTo: "/",
+        },
+      ],
+    },
+  ];
   const [navbar, setNavbar] = useState(false);
   const changeNavBG = () => {
     if (window.scrollY >= 100) {

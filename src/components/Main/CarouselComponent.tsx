@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import imgA from "../../assets/images/CarouselImages/imgFF.png";
 import imgB from "../../assets/images/CarouselImages/imgX.png";
 import imgC from "../../assets/images/CarouselImages/imgZ.png"
+import imgD from "../../assets/images/CarouselImages/imgD.png"
 import { Box, Button, Typography, useTheme, useMediaQuery } from "@mui/material";
 import CarouselBottomDiv from "./CarouselBottomDiv";
 import "swiper/css";
@@ -18,25 +19,39 @@ const CarouselComponent = () => {
   const isMatch = useMediaQuery(theme.breakpoints.down("md"))
   const carouselData = [
     {
-      heading: "Custom Software Development Corporation",
+      heading: "An AI-First Web & Mobile Development Company",
       description:
-        "We’re providing the best consumer-oriented software solutions to our clients in order to improve and transform customers’ business processes, reduce costs within their organization.",
+        "You need an AI-First company with a team of dedicated AI engineers. We have been working on Full Spectrum AI solutions for over a decade pushing the technology race forward.",
       image: imgA,
-      btnText: "GET STARTED",
+      btnText: "Explore",
     },
     {
-      heading: "Globally Flourishing",
+      heading: "Building Tools For The Future In Perfection ",
       description:
-        "We are persistently developing and maturing digital solutions for global businesses.",
+        "We've built Nexxt AI to push the envelope further than anyone else has using latest cutting edge technologies. check out our tech stack or leave your email to get more info about our mission.",
       image: imgB,
-      btnText: "INITIATE YOUR PORJECT",
+      btnText: "SEE OUR WORK",
     },
     {
-      heading: "Leading towards Future",
+      heading: "Cross Platform, Cross Functional",
       description:
-        "We use cutting-edge technologies, wearables like smartwatches or fitness trackers, and artificial intelligence, to set industry standards and alter lives.",
+        "We offer full stack development services which means we can give you everything from content to code. Hire us as your full stack developers, and we will work with you to build the perfect, cross platform solution that takes your project from concept to completion.",
       image: imgC,
-      btnText: "GET PROFESSIONAL HELP",
+      btnText: "GET A QUOTE",
+    },
+    {
+      heading: "Nexxt App, The Future Recruitment App",
+      description:
+        "We have Built Nexxt App- An AI app helps you find the engineering talent that is right for your needs. We help businesses hire and manage software developers by using an AI system not found anywhere else today.",
+      image: imgD,
+      btnText: "GET A DEMO",
+    },
+    {
+      heading: "Industries We Are Thriving By Our Solutions",
+      description:
+        "We Are Thriving In Socail Media Apps, E-commerce B2B Applications, Booking Engines, Financial Technology, Crew Management Portals, Customers Dashboards, Vehicle Sharing Apps, Artifical Intelligence Applications, BlockChain and Many more .",
+      image: imgB,
+      btnText: "CHECK OUR STACK",
     },
 
   ];
@@ -183,7 +198,7 @@ const CarouselComponent = () => {
                 >
                   {carouselObj.btnText}
                 </Button> */}
-                <CustomButton text="GET A QUOTE" buttonSize="10px 30px" background={`${theme.palette.background.default}`} />
+                <CustomButton text={carouselObj.btnText} buttonSize="10px 30px" background={`${theme.palette.background.default}`} />
               </Box>
             </Box>
 
@@ -233,8 +248,8 @@ const CarouselComponent = () => {
         <Box display="inline" zIndex="1">
           <CarouselBottomDiv
             heading1="OUR PROJECTS"
-            heading2="Here's What we did in 2022"
-            buttonTitle="Download Now"
+            heading2="We did outstanding advancements and unbelievable expansion in 2022"
+            buttonTitle="Checkout Our Wins"
             color="#ee3824"
             fileLink={"Nexxt Company Profile.pdf"}
           />
@@ -243,8 +258,8 @@ const CarouselComponent = () => {
         <Box zIndex="1">
           <CarouselBottomDiv
             heading1="COMPANY PROFILE"
-            heading2="Learn more about our company"
-            buttonTitle="Download Now"
+            heading2="We are not just a company, we are a story to be amazed with"
+            buttonTitle="Download Our Story"
             color="#3C4048"
           />
         </Box>

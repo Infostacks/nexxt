@@ -42,7 +42,7 @@ const NavButton = ({ title, menuObj }: navButtonProps) => {
                     <Box onMouseLeave={handleClose} >
                         {menuObj.map((obj, index) => (
                             <Link to={obj.linkTo} key={index} style={{ textDecoration: "none" }} >
-                                <MenuItem sx={{ borderBottom: "1px solid gray", backgroundColor: "#282526", color: "white", fontWeight: "900", fontSize: "10px", "&:hover": { color: "#F47A1F", transition: "linear 0.3s", }, }} className="font-bold">{obj.title} </MenuItem>
+                                <MenuItem sx={{ height: "40px", borderBottom: "1px solid gray", backgroundColor: "#282526", color: "white", fontWeight: "600", fontSize: "12px", "&:hover": { color: "#F47A1F", transition: "linear 0.3s", }, }} className="font-bold">{obj.title} </MenuItem>
                             </Link>
                         ))}
                     </Box>

@@ -13,7 +13,7 @@ export const portfoliosprops: PortfolioProjectsProps = {
     portfoliosprops: [
         {
             projectTitle: "Booking.com",
-            projectDescription: "Choose Booking.com if you enjoy traveling but worry about finding a decent place to stay and are sick of looking for websites that can ease your suffering of finding a decent hotel as well as other needs. This website offers simple bookings to make your life easier and also gives you the option to become a client or vendor.",
+            projectDescription: "An AI-based Booking Search Engine that helps find explorer what they need, it is an ERP for travelling having all the Business to Business, Business to Customers and Business to Enterprise System Combine, having important features of E-payments, online reservation of flights, hotels, events, yatchs and many more, Global AI Search Makes Booking.com the most powerful search booking engine in the world with an Active 100 Million Users and 20 Million daily active hits.",
             projectBgImgLink: bgBooking,
             projectLink: "#",
             projectMockupImg: BookingMockup
@@ -21,7 +21,7 @@ export const portfoliosprops: PortfolioProjectsProps = {
         },
         {
             projectTitle: "Crewmama.com",
-            projectDescription: "For freelancers to post their gigs on their website, CrewMama offers a platform.There is no need to browse several websites looking for photographers if one wishes to hire a photographer. With the assistance of a website, you can hire a crew and complete the task quickly without any hustle.",
+            projectDescription: "We often find the problem of making remote team work together, people who are completely strangers and at a distance to work together, We Built Crewmama to solve this hasle using our AI Expert knowledge and Our latest technologies that enables to find people that can work together, Freelancers can create there profiles effortlesly, vendors can create an assignment enter the requirements and boom our platform helps find out that people fulfils the roles and higher working capability of working together now making a Million Mark in users.",
             projectBgImgLink: bgCrewmama,
             projectLink: "#",
             projectMockupImg: CrewmamaMockup

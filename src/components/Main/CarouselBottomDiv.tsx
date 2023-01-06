@@ -3,7 +3,7 @@ import { Box, Button, Typography } from "@mui/material";
 const CarouselBottomDiv = (props: any) => {
   return (
     <Box sx={{ backgroundColor: props.color, height: 160, width: { md: 370, xl: 400 }, paddingY: 1, paddingX: 2 }}>
-      <Typography variant="body1" sx={{ marginTop: 3, color: "#B2B2B2", letterSpacing: "1px" }} >
+      <Typography variant="body1" sx={{ marginTop: 3, color: "#edede9", letterSpacing: "1px" }} >
         {props.heading1}{" "}
       </Typography>
       <Typography variant="body1" sx={{ marginY: 2, color: "#FFFFFF" }} className="font-medium">
