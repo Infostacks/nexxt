@@ -7,6 +7,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { useTheme } from "@mui/material";
 import { ParallaxProvider } from "react-scroll-parallax";
 import FormProvider from "./hooks/formContext";
+import CompanyFormProvider from "./hooks/CompanyProfileFormContext";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -15,9 +16,11 @@ root.render(
   <React.StrictMode>
     <ParallaxProvider>
       <Router>
-        <FormProvider>
-          <App />
-        </FormProvider>
+        <CompanyFormProvider>
+          <FormProvider>
+            <App />
+          </FormProvider>
+        </CompanyFormProvider>
       </Router>
     </ParallaxProvider>
   </React.StrictMode>

@@ -1,7 +1,5 @@
-import { useTheme } from "@mui/material";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import React, { useEffect } from "react";
-import Services from "./pages/Services/Services";
+import { ThemeProvider } from "@mui/material/styles";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import StartupAppDevelopment from "./pages/Startup App Development/StartupAppDevelopment";
@@ -16,7 +14,8 @@ import { config } from "./config/config";
 import AuthRoute from "./AuthRoute";
 import LoginPage from "./pages/Login/Login";
 import Signup from "./pages/SignUp/SignUp";
-import { Logout } from "@mui/icons-material";
+import CompanyInfoIndex from "./components/CompanyProfile";
+import MvpHomeIndex from "./components/MVP Home Components";
 
 initializeApp(config.firebaseConfig);
 
@@ -49,6 +48,8 @@ function App() {
           <Route path="/Recruitment" element={<RecruitmentInfo />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/companyprofile" element={<CompanyInfoIndex />} />
+          <Route path="/home" element={<MvpHomeIndex />} />
         </Routes>
         <FooterApp />
       </ThemeProvider>

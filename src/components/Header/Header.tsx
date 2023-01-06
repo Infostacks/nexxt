@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Box, Button, Grid, useMediaQuery, useTheme } from "@mui/material";
+import {
+  Box,
+  Button,
+  Menu,
+  MenuItem,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import CustomButton from "../Global Components/CustomButton";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import NavButton from "../Global Components/NavButton";
@@ -11,6 +18,19 @@ interface headerprops {
   logourl: string;
 }
 const Header = ({ logourl }: headerprops) => {
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  const handleClickk = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  const handleProfile = () => {
+    navigate("/companyprofile");
+    setAnchorEl(null);
+  };
+
   const navigate = useNavigate();
 
   const Logout = () => {
@@ -182,7 +202,7 @@ const Header = ({ logourl }: headerprops) => {
                   buttonSize={"7px 30px 7px 30px"}
                 />
               </Link>
-              <Link
+              {/* <Link
                 to="/signup"
                 style={{
                   textDecoration: "none",
@@ -196,8 +216,8 @@ const Header = ({ logourl }: headerprops) => {
                   text={"SignIn/Register"}
                   buttonSize={"7px 30px 7px 30px"}
                 />
-              </Link>
-              <Link
+              </Link> */}
+              {/* <Link
                 to=""
                 style={{
                   textDecoration: "none",
@@ -212,8 +232,92 @@ const Header = ({ logourl }: headerprops) => {
                   text={"LogOut"}
                   buttonSize={"7px 30px 7px 30px"}
                 />
-              </Link>
+              </Link> */}
             </Box>
+            <div>
+              <Button
+                className="font-medium"
+                sx={{
+                  marginRight: "15px",
+                  textDecoration: "none",
+                  fontWeight: "normal",
+                  color: window.location.pathname !== "/" ? "black" : "white",
+                  fontSize: "12px",
+                  "&:hover": {
+                    borderBottom: 2,
+                    borderBottomColor: "orangeRed",
+                  },
+
+                  height: "45px",
+                }}
+                id="basic-button"
+                aria-controls={open ? "basic-menu" : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? "true" : undefined}
+                onClick={handleClickk}
+              >
+                Dashboard
+              </Button>
+              <Menu
+                sx={{
+                  "& .MuiList-root": {
+                    padding: "0px 0px",
+                    "&:hover": { backgroundColor: "#282526" },
+                  },
+                  "& .MuiPopover-root": { paddingRight: 0 },
+                }}
+                id="basic-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                MenuListProps={{
+                  "aria-labelledby": "basic-button",
+                }}
+              >
+                <MenuItem
+                  sx={{
+                    borderBottom: "1px solid gray",
+                    backgroundColor: "#282526",
+                    color: "white",
+                    fontWeight: "900",
+                    fontSize: "10px",
+                    "&:hover": { color: "#F47A1F", transition: "linear 0.3s" },
+                  }}
+                  className="font-bold"
+                  onClick={handleClose}
+                >
+                  My Profile
+                </MenuItem>
+                <MenuItem
+                  sx={{
+                    borderBottom: "1px solid gray",
+                    backgroundColor: "#282526",
+                    color: "white",
+                    fontWeight: "900",
+                    fontSize: "10px",
+                    "&:hover": { color: "#F47A1F", transition: "linear 0.3s" },
+                  }}
+                  className="font-bold"
+                  onClick={handleProfile}
+                >
+                  My account
+                </MenuItem>
+                <MenuItem
+                  sx={{
+                    borderBottom: "1px solid gray",
+                    backgroundColor: "#282526",
+                    color: "white",
+                    fontWeight: "900",
+                    fontSize: "10px",
+                    "&:hover": { color: "#F47A1F", transition: "linear 0.3s" },
+                  }}
+                  className="font-bold"
+                  onClick={() => Logout()}
+                >
+                  Logout
+                </MenuItem>
+              </Menu>
+            </div>
           </Box>
         </Box>
       )}
